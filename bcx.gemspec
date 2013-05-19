@@ -5,7 +5,7 @@ Gem::Specification.new do |gem|
   gem.authors       = ["Paul Springett"]
   gem.email         = ["paul@springett.me"]
   gem.description   = %q{Fully-fledged Ruby API wrapper for Basecamp Next}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.summary       = %q{Fully-fledged Ruby API wrapper for Basecamp Next. Uses the Rapidash gem under the hood.}
   gem.homepage      = ""
 
   gem.files         = `git ls-files`.split($\)
