@@ -8,6 +8,7 @@ module Bcx
   module Resources
     autoload :Project, 'bcx/resources/project'
     autoload :Todolist, 'bcx/resources/todolist'
+    autoload :Todo, 'bcx/resources/todo'
   end
 
   class << self
