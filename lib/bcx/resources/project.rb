@@ -4,6 +4,11 @@ module Bcx
       root :project
 
       resource :todolists, class_name: 'Bcx::Resources::Todolist'
+
+      def archived!
+        @url += '/archived'
+        call!
+      end
     end
   end
 end
