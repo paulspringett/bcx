@@ -3,7 +3,6 @@ module Bcx
 
     # Bcx::Resources::Project
     # Provides access to projects resoource and other nested resources
-    # Examples:
     #
     # Fetch all projects
     # GET /projects.json
