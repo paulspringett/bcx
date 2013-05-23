@@ -7,6 +7,7 @@ module Bcx
     extension :json
 
     resource :projects, class_name: 'Bcx::Resources::Project'
+    resource :todolists, class_name: 'Bcx::Resources::Todolist'
 
     def initialize(auth_method, options = {})
       self.class.method(auth_method)
