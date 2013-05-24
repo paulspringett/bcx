@@ -37,8 +37,8 @@ module Bcx
     class Project < Rapidash::Base
       root :project
 
-      resource :todolists, class_name: 'Bcx::Resources::Todolist'
-      resource :todos, class_name: 'Bcx::Resources::Todo'
+      resource :todolists
+      resource :todos
 
       def archived!
         @url += '/archived'
