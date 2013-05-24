@@ -29,7 +29,7 @@ module Bcx
 
       def completed!
         @url += '/completed'
-        @call!
+        call!
       end
     end
   end
