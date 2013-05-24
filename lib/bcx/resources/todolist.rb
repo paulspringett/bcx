@@ -25,8 +25,6 @@ module Bcx
     #   client.todolists.completed!
     #
     class Todolist < Rapidash::Base
-      root :todolist
-
       resource :todos, class_name: 'Bcx::Resources::Todo'
 
       def completed!

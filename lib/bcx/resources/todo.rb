@@ -32,7 +32,6 @@ module Bcx
     #   client.projects(1).todos(2).delete!
     #
     class Todo < Rapidash::Base
-      root :todo
     end
   end
 end
