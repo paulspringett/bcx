@@ -16,4 +16,6 @@ Gem::Specification.new do |gem|
   gem.version       = Bcx::VERSION
 
   gem.add_runtime_dependency 'rapidash', '~> 0.2.0'
+
+  gem.add_development_dependency 'vcr'
 end

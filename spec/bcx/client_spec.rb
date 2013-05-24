@@ -2,11 +2,11 @@ require 'spec_helper'
 
 describe Bcx::Client do
 
-  let(:client) { Bcx::Client.new(:http, login: 'username', password: 'secret') }
+  let(:client) { Bcx::Client.new(:http, login: 'bcx-test-user', password: 'secret') }
 
   describe "http auth" do
     it "should assign login" do
-      expect(client.login).to eq 'username'
+      expect(client.login).to eq 'bcx-test-user'
     end
 
     it "should assign password" do
