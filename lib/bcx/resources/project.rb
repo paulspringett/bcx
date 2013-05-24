@@ -35,8 +35,6 @@ module Bcx
     #   client.projects(123).delete!
     #
     class Project < Rapidash::Base
-      root :project
-
       resource :todolists
       resource :todos
 
