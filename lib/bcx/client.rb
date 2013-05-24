@@ -2,6 +2,11 @@ module Bcx
   class Client < Rapidash::Client
     extension :json
 
+    raise_errors
+    # Add error handling with Faraday
+    # https://github.com/pengwynn/octokit/blob/master/lib/octokit/error.rb
+    # https://github.com/pengwynn/octokit/blob/master/spec/helper.rb
+
     resource :projects, class_name: 'Bcx::Resources::Project'
     resource :todolists, class_name: 'Bcx::Resources::Todolist'
 
