@@ -45,4 +45,21 @@ describe Bcx::Resources::Project, :vcr do
       expect(project.created_at).not_to be_blank
     end
   end
+
+  describe "PUT /projects/2937644" do
+    it "should update an existing project" do
+      project = client.projects(2937644).update!(description: 'New description')
+      expect(project.description).to eq 'New description'
+    end
+  end
+
+  describe "DELETE /projects/2937644" do
+    it "should delete a project" do
+      client.projects(2937644).delete!
+      expect { client.projects!(2937644) }.to raise_error { |error|
+        expect(error).to be_a Bcx::ResponseError
+        expect(error.status).to eq 404
+      }
+    end
+  end
 end
