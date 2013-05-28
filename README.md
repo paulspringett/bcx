@@ -1,29 +1,76 @@
-# Bcx
+## Bcx
 
-TODO: Write a gem description
+Fully-fledged Ruby API wrapper for Basecamp Next
 
-## Installation
+```
+      ___________________ ____  ___
+      \______   \_   ___ \\   \/  /
+       |    |  _/    \  \/ \     /
+       |    |   \     \____/     \
+       |______  /\______  /___/\  \
+              \/        \/      \_/
+```
 
-Add this line to your application's Gemfile:
+### Installation
 
-    gem 'bcx'
+```shell
+$ gem install bcx
+```
 
-And then execute:
+Or if you are using Bundler
 
-    $ bundle
+```ruby
+gem 'bcx'
+```
 
-Or install it yourself as:
+### Usage
 
-    $ gem install bcx
+You can connect to the Basecamp API using the Bcx client. The client provides authentication over HTTP or OAuth.
 
-## Usage
+#### HTTP Basic Auth
 
-TODO: Write usage instructions here
+```ruby
+client = Bcx::Client.new(:http, login: 'username', password: 'secret')
+```
 
-## Contributing
+#### OAuth
+
+```ruby
+client = Bcx::Client.new(:oauth, client_id: '1234567890', client_secret: '831994c4170', access_token: 'b02ff9345c3')
+```
+
+You can get a `client_id` and `client_secret` from https://integrate.37signals.com/
+
+### Resources
+
+See the [full resource documentation](#todo) for all available API endpoints.
+
+#### Bang operators
+
+It's important to understand the use of bang methods when using Bcx. Each resource can be called with or without a `!`.
+
+**Without the bang** you can chain and build endpoint calls:
+
+```ruby
+client.projects(123).todolists
+# => #<Bcx::Resources::Todolist ...>
+
+client.projects(123).todolists.url
+# => "projects/123/todolists"
+```
+
+**With the bang** you can hit the API endpoint over the network and fetch data:
+
+```ruby
+client.projects(123).todolists!
+# => [#<Hashie::Mash id=456 ...>, #<Hashie::Mash id=789 ...>]
+```
+
+### Contributing
 
 1. Fork it
 2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Added some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+3. Commit your changes (`git commit -am 'Add some feature'`)
+4. Write your tests and check everything passes
+5. Push to the branch (`git push origin my-new-feature`)
+6. Create new Pull Request (into the development branch)
