@@ -21,3 +21,6 @@ module Bcx
     yield(configuration)
   end
 end
+
+require 'bcx/response_error'
+Rapidash.response_exception_class = Bcx::ResponseError
