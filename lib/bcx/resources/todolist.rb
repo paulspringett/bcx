@@ -24,6 +24,16 @@ module Bcx
     #
     #   client.todolists.completed!
     #
+    # Get specific todolist including the todos
+    # GET /projects/123/todolists/456.json
+    #
+    #   client.projects(123).todolists!(456)
+    #
+    # Create a new todolist
+    # POST /projects/1/todolists.json
+    #
+    #   client.projects(123).todolists.create!(name: 'My todolist', description: 'This is a todolist')
+    #
     class Todolist < Rapidash::Base
       resource :todos, class_name: 'Bcx::Resources::Todo'
 
