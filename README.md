@@ -1,5 +1,7 @@
 ## Bcx
 
+> NB. This is still alpha software and may not work as expected. It's also missing a lot of the Basecamp endpoints. Please feel free to contribute!
+
 Fully-fledged Ruby API wrapper for Basecamp Next
 
 ```
