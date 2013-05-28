@@ -14,6 +14,9 @@ module Bcx
       self.class.site("https://basecamp.com/#{@account}/api/#{@api_version}/")
       self.class.method(auth_method)
 
+      options[:uid] ||= options[:client_id]
+      options[:secret] ||= options[:client_secret]
+
       super(options)
     end
 
