@@ -1,0 +1,59 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://basecamp.com/2274488/api/v1/projects/2956584/todolists/completed.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.7
+      Content-Type:
+      - application/json
+      Authorization:
+      - Basic YmN4LXRlc3QtdXNlcjpzZWNyZXQ=
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      server:
+      - nginx
+      date:
+      - Tue, 28 May 2013 20:50:19 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      status:
+      - 200 OK
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+      x-content-type-options:
+      - nosniff
+      x-ua-compatible:
+      - chrome=1
+      x-xhr-current-location:
+      - /2274488/api/v1/projects/2956584/todolists/completed.json
+      x-asset-paths:
+      - ! '{"application.js":"application-65ce9eab0fe6859d64efe0f889d5e231.js","application.css":"application-417c4f9074157e12c1dfb6ede37ce3e3.css"}'
+      last-modified:
+      - Tue, 28 May 2013 20:45:40 GMT
+      cache-control:
+      - max-age=0, private, must-revalidate
+      x-request-id:
+      - 2624fee2-4ab8-4ae6-b9a9-42db7cf13df5
+      x-runtime:
+      - '0.423042'
+    body:
+      encoding: US-ASCII
+      string: ! '[{"id":7701289,"name":"Second todolist","description":null,"created_at":"2013-05-28T20:45:08.000Z","updated_at":"2013-05-28T20:45:19.000Z","completed":true,"position":1,"remaining_count":0,"completed_count":2,"creator":{"id":4666033,"name":"Paul
+        Springett","avatar_url":"http://dge9rmgqjs8m1.cloudfront.net/global/default_avatar_v1_3/avatar.gif?r=3"},"url":"https://basecamp.com/2274488/api/v1/projects/2956584-new-project/todolists/7701289-second-todolist.json"}]'
+    http_version: 
+  recorded_at: Tue, 28 May 2013 20:50:19 GMT
+recorded_with: VCR 2.5.0

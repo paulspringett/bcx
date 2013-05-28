@@ -1,0 +1,59 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://basecamp.com/2274488/api/v1/projects.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.7
+      Content-Type:
+      - application/json
+      Authorization:
+      - Basic YmN4LXRlc3QtdXNlcjpzZWNyZXQ=
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      server:
+      - nginx
+      date:
+      - Tue, 28 May 2013 20:28:56 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      status:
+      - 200 OK
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+      x-content-type-options:
+      - nosniff
+      x-ua-compatible:
+      - chrome=1
+      x-xhr-current-location:
+      - /2274488/api/v1/projects.json
+      x-asset-paths:
+      - ! '{"application.js":"application-65ce9eab0fe6859d64efe0f889d5e231.js","application.css":"application-417c4f9074157e12c1dfb6ede37ce3e3.css"}'
+      etag:
+      - ! '"58d12b1c36519a45ee30a8e6088f855c"'
+      cache-control:
+      - max-age=0, private, must-revalidate
+      x-request-id:
+      - ce1b5dc0-020a-4cdd-9767-62114a2ce040
+      x-runtime:
+      - '0.367040'
+    body:
+      encoding: US-ASCII
+      string: ! '[{"id":2937644,"name":"Explore Basecamp!","description":"New description","archived":false,"created_at":"2013-05-24T18:59:10.000Z","updated_at":"2013-05-28T20:18:46.000Z","last_event_at":"2013-05-28T20:18:46.000Z","starred":false,"url":"https://basecamp.com/2274488/api/v1/projects/2937644-explore-basecamp.json"},{"id":2951531,"name":"New
+        project","description":"A new project created over the API","archived":false,"created_at":"2013-05-28T14:11:45.000Z","updated_at":"2013-05-28T14:11:45.000Z","last_event_at":"2013-05-28T14:11:45.000Z","starred":false,"url":"https://basecamp.com/2274488/api/v1/projects/2951531-new-project.json"}]'
+    http_version: 
+  recorded_at: Tue, 28 May 2013 20:28:56 GMT
+recorded_with: VCR 2.5.0

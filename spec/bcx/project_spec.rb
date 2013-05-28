@@ -1,8 +1,6 @@
 require 'spec_helper'
 
-describe Bcx::Client do
-  use_vcr_cassette 'projects'
-
+describe Bcx::Resources::Project, :vcr do
   let(:client) { Bcx::Client.new(:http, login: 'bcx-test-user', password: 'secret') }
 
   describe "GET /projects" do
