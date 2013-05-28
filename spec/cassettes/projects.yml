@@ -9,6 +9,8 @@ http_interactions:
     headers:
       User-Agent:
       - Faraday v0.8.7
+      Content-Type:
+      - application/json
       Authorization:
       - Basic YmN4LXRlc3QtdXNlcjpzZWNyZXQ=
   response:
@@ -19,7 +21,7 @@ http_interactions:
       server:
       - nginx
       date:
-      - Fri, 24 May 2013 19:35:42 GMT
+      - Tue, 28 May 2013 14:11:42 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -41,19 +43,19 @@ http_interactions:
       x-asset-paths:
       - ! '{"application.js":"application-65ce9eab0fe6859d64efe0f889d5e231.js","application.css":"application-417c4f9074157e12c1dfb6ede37ce3e3.css"}'
       etag:
-      - ! '"2102ff2576d51660bb0c853c4bca2845"'
+      - ! '"37b0867dee6b2d56eaab46acca39bdca"'
       cache-control:
       - max-age=0, private, must-revalidate
       x-request-id:
-      - 315dda02-0032-4c64-84c9-592ea2bfec96
+      - bb8e4add-37ce-4abe-92dd-63265a391d2b
       x-runtime:
-      - '0.316708'
+      - '0.384410'
     body:
       encoding: US-ASCII
       string: ! '[{"id":2937644,"name":"Explore Basecamp!","description":"A sample
-        project to help you discover Basecamp.","archived":false,"created_at":"2013-05-24T18:59:10.000Z","updated_at":"2013-05-24T18:59:13.000Z","last_event_at":null,"starred":false,"url":"https://basecamp.com/2274488/api/v1/projects/2937644-explore-basecamp.json"}]'
+        project to help you discover Basecamp.","archived":false,"created_at":"2013-05-24T18:59:10.000Z","updated_at":"2013-05-28T13:57:28.000Z","last_event_at":"2013-05-28T12:30:00.000Z","starred":false,"url":"https://basecamp.com/2274488/api/v1/projects/2937644-explore-basecamp.json"}]'
     http_version: 
-  recorded_at: Fri, 24 May 2013 19:35:42 GMT
+  recorded_at: Tue, 28 May 2013 14:11:40 GMT
 - request:
     method: get
     uri: https://basecamp.com/2274488/api/v1/projects/archived.json
@@ -63,6 +65,8 @@ http_interactions:
     headers:
       User-Agent:
       - Faraday v0.8.7
+      Content-Type:
+      - application/json
       Authorization:
       - Basic YmN4LXRlc3QtdXNlcjpzZWNyZXQ=
   response:
@@ -73,7 +77,7 @@ http_interactions:
       server:
       - nginx
       date:
-      - Fri, 24 May 2013 20:26:17 GMT
+      - Tue, 28 May 2013 14:11:43 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -99,14 +103,14 @@ http_interactions:
       cache-control:
       - max-age=0, private, must-revalidate
       x-request-id:
-      - 1889de65-4063-4619-baea-d6c9a7bd439c
+      - 216ce366-9920-4c63-8ef3-c7f98e2d3811
       x-runtime:
-      - '0.325485'
+      - '0.326143'
     body:
       encoding: US-ASCII
       string: ! '[]'
     http_version: 
-  recorded_at: Fri, 24 May 2013 20:26:17 GMT
+  recorded_at: Tue, 28 May 2013 14:11:41 GMT
 - request:
     method: get
     uri: https://basecamp.com/2274488/api/v1/projects/2937644.json
@@ -116,6 +120,8 @@ http_interactions:
     headers:
       User-Agent:
       - Faraday v0.8.7
+      Content-Type:
+      - application/json
       Authorization:
       - Basic YmN4LXRlc3QtdXNlcjpzZWNyZXQ=
   response:
@@ -126,7 +132,7 @@ http_interactions:
       server:
       - nginx
       date:
-      - Fri, 24 May 2013 20:30:41 GMT
+      - Tue, 28 May 2013 14:11:44 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -148,19 +154,79 @@ http_interactions:
       x-asset-paths:
       - ! '{"application.js":"application-65ce9eab0fe6859d64efe0f889d5e231.js","application.css":"application-417c4f9074157e12c1dfb6ede37ce3e3.css"}'
       etag:
-      - ! '"0eacffca1b0bd53baa05a4cea5884bc6"'
+      - ! '"8630721d5645223a58ad892a40ab08c1"'
       last-modified:
-      - Fri, 24 May 2013 18:59:13 GMT
+      - Tue, 28 May 2013 13:57:28 GMT
       cache-control:
       - max-age=0, private, must-revalidate
       x-request-id:
-      - 66764cfd-8120-46b1-a3ad-0fde963ff5fe
+      - ca96434c-ca3a-42e8-a14d-fe2462fa51b0
       x-runtime:
-      - '0.394481'
+      - '0.390113'
     body:
       encoding: US-ASCII
       string: ! '{"id":2937644,"name":"Explore Basecamp!","description":"A sample
-        project to help you discover Basecamp.","archived":false,"created_at":"2013-05-24T18:59:10.000Z","updated_at":"2013-05-24T18:59:13.000Z","last_event_at":null,"starred":false,"creator":{"id":4666034,"name":"Basecamp","avatar_url":"http://dge9rmgqjs8m1.cloudfront.net/global/79383b7fc061815979c8c638784be44d4aa4628aaa16ee5614658a2b4d662eb9ce6fc85f0ea77f81b6e6bd3cdb9c266f42cbf1d2426968d83cb50f0d3078fcd65e6055e264b268aa44ffaa94d9475efa/avatar.gif?r=3"},"accesses":{"count":1,"updated_at":"2013-05-24T18:59:13.000Z","url":"https://basecamp.com/2274488/api/v1/projects/2937644-explore-basecamp/accesses.json"},"attachments":{"count":17,"updated_at":"2012-08-22T22:16:46.000Z","url":"https://basecamp.com/2274488/api/v1/projects/2937644-explore-basecamp/attachments.json"},"calendar_events":{"count":0,"updated_at":null,"url":"https://basecamp.com/2274488/api/v1/projects/2937644-explore-basecamp/calendar_events.json"},"documents":{"count":3,"updated_at":"2012-11-23T20:27:39.000Z","url":"https://basecamp.com/2274488/api/v1/projects/2937644-explore-basecamp/documents.json"},"forwards":{"count":0,"updated_at":null,"url":"https://basecamp.com/2274488/api/v1/projects/2937644-explore-basecamp/forwards.json"},"topics":{"count":8,"updated_at":"2012-03-08T00:55:18.000Z","url":"https://basecamp.com/2274488/api/v1/projects/2937644-explore-basecamp/topics.json"},"todolists":{"remaining_count":2,"completed_count":0,"updated_at":"2012-05-17T19:52:13.000Z","url":"https://basecamp.com/2274488/api/v1/projects/2937644-explore-basecamp/todolists.json"}}'
+        project to help you discover Basecamp.","archived":false,"created_at":"2013-05-24T18:59:10.000Z","updated_at":"2013-05-28T13:57:28.000Z","last_event_at":"2013-05-28T12:30:00.000Z","starred":false,"creator":{"id":4666034,"name":"Basecamp","avatar_url":"http://dge9rmgqjs8m1.cloudfront.net/global/79383b7fc061815979c8c638784be44d4aa4628aaa16ee5614658a2b4d662eb9ce6fc85f0ea77f81b6e6bd3cdb9c266f42cbf1d2426968d83cb50f0d3078fcd65e6055e264b268aa44ffaa94d9475efa/avatar.gif?r=3"},"accesses":{"count":1,"updated_at":"2013-05-24T18:59:13.000Z","url":"https://basecamp.com/2274488/api/v1/projects/2937644-explore-basecamp/accesses.json"},"attachments":{"count":17,"updated_at":"2012-08-22T22:16:46.000Z","url":"https://basecamp.com/2274488/api/v1/projects/2937644-explore-basecamp/attachments.json"},"calendar_events":{"count":0,"updated_at":null,"url":"https://basecamp.com/2274488/api/v1/projects/2937644-explore-basecamp/calendar_events.json"},"documents":{"count":3,"updated_at":"2012-11-23T20:27:39.000Z","url":"https://basecamp.com/2274488/api/v1/projects/2937644-explore-basecamp/documents.json"},"forwards":{"count":0,"updated_at":null,"url":"https://basecamp.com/2274488/api/v1/projects/2937644-explore-basecamp/forwards.json"},"topics":{"count":9,"updated_at":"2013-05-28T12:30:00.000Z","url":"https://basecamp.com/2274488/api/v1/projects/2937644-explore-basecamp/topics.json"},"todolists":{"remaining_count":2,"completed_count":0,"updated_at":"2012-05-17T19:52:13.000Z","url":"https://basecamp.com/2274488/api/v1/projects/2937644-explore-basecamp/todolists.json"}}'
     http_version: 
-  recorded_at: Fri, 24 May 2013 20:30:41 GMT
+  recorded_at: Tue, 28 May 2013 14:11:42 GMT
+- request:
+    method: post
+    uri: https://basecamp.com/2274488/api/v1/projects.json
+    body:
+      encoding: UTF-8
+      string: ! '{"name":"New project","description":"A new project created over the
+        API"}'
+    headers:
+      User-Agent:
+      - Faraday v0.8.7
+      Content-Type:
+      - application/json
+      Authorization:
+      - Basic YmN4LXRlc3QtdXNlcjpzZWNyZXQ=
+  response:
+    status:
+      code: 201
+      message: 
+    headers:
+      server:
+      - nginx
+      date:
+      - Tue, 28 May 2013 14:11:45 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      status:
+      - 201 Created
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+      x-content-type-options:
+      - nosniff
+      x-ua-compatible:
+      - chrome=1
+      x-xhr-current-location:
+      - /2274488/api/v1/projects.json
+      x-asset-paths:
+      - ! '{"application.js":"application-65ce9eab0fe6859d64efe0f889d5e231.js","application.css":"application-417c4f9074157e12c1dfb6ede37ce3e3.css"}'
+      location:
+      - https://basecamp.com/2274488/api/v1/projects/2951531-new-project.json
+      etag:
+      - ! '"ec635c756643638ca77fecc01f03938d"'
+      cache-control:
+      - max-age=0, private, must-revalidate
+      x-request-id:
+      - e11e49b3-405b-4d1c-8e06-80778c5c8cb4
+      x-runtime:
+      - '0.589819'
+    body:
+      encoding: US-ASCII
+      string: ! '{"id":2951531,"name":"New project","description":"A new project created
+        over the API","archived":false,"created_at":"2013-05-28T14:11:45.586Z","updated_at":"2013-05-28T14:11:45.586Z","last_event_at":"2013-05-28T14:11:45.000Z","starred":false,"creator":{"id":4666033,"name":"Paul
+        Springett","avatar_url":"http://dge9rmgqjs8m1.cloudfront.net/global/default_avatar_v1_3/avatar.gif?r=3"},"accesses":{"count":1,"updated_at":null,"url":"https://basecamp.com/2274488/api/v1/projects/2951531-new-project/accesses.json"},"attachments":{"count":0,"updated_at":null,"url":"https://basecamp.com/2274488/api/v1/projects/2951531-new-project/attachments.json"},"calendar_events":{"count":0,"updated_at":null,"url":"https://basecamp.com/2274488/api/v1/projects/2951531-new-project/calendar_events.json"},"documents":{"count":0,"updated_at":null,"url":"https://basecamp.com/2274488/api/v1/projects/2951531-new-project/documents.json"},"forwards":{"count":0,"updated_at":null,"url":"https://basecamp.com/2274488/api/v1/projects/2951531-new-project/forwards.json"},"topics":{"count":0,"updated_at":null,"url":"https://basecamp.com/2274488/api/v1/projects/2951531-new-project/topics.json"},"todolists":{"remaining_count":0,"completed_count":0,"updated_at":null,"url":"https://basecamp.com/2274488/api/v1/projects/2951531-new-project/todolists.json"}}'
+    http_version: 
+  recorded_at: Tue, 28 May 2013 14:11:44 GMT
 recorded_with: VCR 2.2.5

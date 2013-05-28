@@ -18,4 +18,23 @@ describe Bcx::Client do
     end
   end
 
+  # TODO: test handling to reponse errors, with error codes
+  # it "should fail for invalid attributes" do
+  #   expect { client.projects.create!(name: '') }.to raise_error { |error|
+  #     expect(error).to be_a Bcx::ResponseError
+  #     expect(error.status).to eq 422
+  #   }
+  # end
+
+  # Rescue a response error example
+  # begin
+  #   project = client.projects.create!(name: 'foo')
+  # rescue Bcx::ResponseError => response
+  #   puts response.status
+  #   => 422
+  #   puts response.body
+  #   => "Name cannot be blank"
+  # end
+
+
 end

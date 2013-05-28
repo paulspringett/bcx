@@ -42,8 +42,9 @@ describe Bcx::Client do
   end
 
   describe "POST /projects" do
-    it "should description" do
-
+    it "should create a new project" do
+      project = client.projects.create!(name: 'New project', description: 'A new project created over the API')
+      expect(project.created_at).not_to be_blank
     end
   end
 end
