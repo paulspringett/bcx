@@ -68,6 +68,28 @@ client.projects(123).todolists!
 # => [#<Hashie::Mash id=456 ...>, #<Hashie::Mash id=789 ...>]
 ```
 
+### Error handling
+
+If the response whilst fetching a resource is a 4xx or 5xx, Bcx will raise a `Bcx::ResponseError` exception.
+
+```ruby
+client.projects.create!(name: '')
+# => Bcx::ResponseError: 422 POST https://basecamp.com/2274488/api/v1/projects.json | Errors: name can't be blank
+```
+
+You can rescue this exception to grab the status, method, URL and errors individually.
+
+```ruby
+begin
+  client.projects.create!(name: '')
+rescue Bcx::ResponseError => response
+  response.method # => "POST"
+  response.status # => 422
+  response.url # => "https://basecamp.com/2274488/api/v1/projects.json"
+  response.errors # => ["name can't be blank"]
+end
+```
+
 ### Contributing
 
 1. Fork it
