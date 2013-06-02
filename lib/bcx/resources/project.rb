@@ -38,10 +38,12 @@ module Bcx
       resource :todolists
       resource :todos
 
-      def archived!
-        @url += '/archived'
-        call!
-      end
+      collection :archived
+
+      # def archived!
+      #   @url += '/archived'
+      #   call!
+      # end
     end
   end
 end
