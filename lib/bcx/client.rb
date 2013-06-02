@@ -1,6 +1,7 @@
 module Bcx
   class Client < Rapidash::Client
     extension :json
+    encode_post_data_with :json
 
     raise_errors
 
