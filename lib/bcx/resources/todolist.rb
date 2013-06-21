@@ -37,10 +37,7 @@ module Bcx
     class Todolist < Rapidash::Base
       resource :todos, class_name: 'Bcx::Resources::Todo'
 
-      def completed!
-        @url += '/completed'
-        call!
-      end
+      collection :completed
     end
   end
 end

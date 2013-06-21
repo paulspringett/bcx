@@ -7,7 +7,6 @@ module Bcx
     #   client.people(1).assigned_todos
     #
     class Person < Rapidash::Base
-
     end
   end
 end

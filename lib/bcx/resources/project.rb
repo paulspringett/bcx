@@ -39,11 +39,6 @@ module Bcx
       resource :todos
 
       collection :archived
-
-      # def archived!
-      #   @url += '/archived'
-      #   call!
-      # end
     end
   end
 end
