@@ -80,11 +80,6 @@ describe Bcx::Resources::Todolist, :vcr do
   end
 
   describe "DELETE /projects/2956584/todolists/8268819.json" do
-    it "should create a new todolist" do
-      todolist = client.projects(2951531).todolists(8268819).update!(name: 'Renamed todolist')
-      expect(todolist.name).to eq 'Renamed todolist'
-    end
-
     it "should delete a todolist" do
       client.projects(2951531).todolists(8268819).delete!
       expect { client.projects(2951531).todolists!(8268819) }.to raise_error { |error|
