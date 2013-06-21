@@ -1,0 +1,186 @@
+---
+http_interactions:
+- request:
+    method: put
+    uri: https://basecamp.com/2274488/api/v1/projects/2956584/todolists/8268819.json
+    body:
+      encoding: UTF-8
+      string: ! '{"name":"Renamed todolist"}'
+    headers:
+      User-Agent:
+      - Faraday v0.8.7
+      Authorization:
+      - Basic YmN4LXRlc3QtdXNlcjpzZWNyZXQ=
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 301
+      message: 
+    headers:
+      server:
+      - nginx
+      date:
+      - Fri, 21 Jun 2013 22:11:54 GMT
+      content-type:
+      - text/html; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      status:
+      - 301 Moved Permanently
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+      x-content-type-options:
+      - nosniff
+      x-ua-compatible:
+      - chrome=1
+      x-xhr-current-location:
+      - /2274488/api/v1/projects/2956584/todolists/8268819.json
+      x-asset-paths:
+      - ! '{"application.js":"application-eb8afc75ba8fcbb36b8518826dd32bc5.js","application.css":"application-18059b31e3ebdcca82003cfaf2564179.css"}'
+      location:
+      - https://basecamp.com/2274488/api/v1/projects/2951531/todolists/8268819.json?moved=true
+      cache-control:
+      - no-cache
+      x-request-id:
+      - dff7cb08-4935-427f-a4ed-2f60351e02a7
+      x-runtime:
+      - '0.119044'
+    body:
+      encoding: US-ASCII
+      string: <html><body>You are being <a href="https://basecamp.com/2274488/api/v1/projects/2951531/todolists/8268819.json?moved=true">redirected</a>.</body></html>
+    http_version: 
+  recorded_at: Fri, 21 Jun 2013 22:11:54 GMT
+- request:
+    method: get
+    uri: https://basecamp.com/2274488/api/v1/projects/2951531/todolists/8268819.json?moved=true
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.7
+      Authorization:
+      - Basic YmN4LXRlc3QtdXNlcjpzZWNyZXQ=
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      server:
+      - nginx
+      date:
+      - Fri, 21 Jun 2013 22:11:54 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      status:
+      - 200 OK
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+      x-content-type-options:
+      - nosniff
+      x-ua-compatible:
+      - chrome=1
+      x-xhr-current-location:
+      - /2274488/api/v1/projects/2951531/todolists/8268819.json?moved=true
+      x-asset-paths:
+      - ! '{"application.js":"application-eb8afc75ba8fcbb36b8518826dd32bc5.js","application.css":"application-18059b31e3ebdcca82003cfaf2564179.css"}'
+      etag:
+      - ! '"81e46ff9ee5f546c6d98d48c720a938d"'
+      last-modified:
+      - Fri, 21 Jun 2013 22:06:49 GMT
+      cache-control:
+      - max-age=0, private, must-revalidate
+      x-request-id:
+      - dd670c7a-121f-4c98-acb8-d80de79568bf
+      x-runtime:
+      - '0.163867'
+    body:
+      encoding: US-ASCII
+      string: ! '{"id":8268819,"name":"Example todolist","description":null,"created_at":"2013-06-21T21:50:13.000Z","updated_at":"2013-06-21T22:06:49.000Z","completed":false,"position":1,"remaining_count":3,"completed_count":0,"creator":{"id":4666033,"name":"Paul
+        Springett","avatar_url":"http://dge9rmgqjs8m1.cloudfront.net/global/default_avatar_v1_3/avatar.gif?r=3"},"todos":{"remaining":[{"id":48545209,"todolist_id":8268819,"position":1,"content":"Another
+        todo","completed":false,"created_at":"2013-06-21T21:50:24.000Z","updated_at":"2013-06-21T21:50:24.000Z","comments_count":0,"due_on":null,"due_at":null,"creator":{"id":4666033,"name":"Paul
+        Springett","avatar_url":"http://dge9rmgqjs8m1.cloudfront.net/global/default_avatar_v1_3/avatar.gif?r=3"},"url":"https://basecamp.com/2274488/api/v1/projects/2951531-new-project/todos/48545209-another-todo.json"},{"id":48545212,"todolist_id":8268819,"position":2,"content":"Number
+        3","completed":false,"created_at":"2013-06-21T21:50:27.000Z","updated_at":"2013-06-21T21:50:27.000Z","comments_count":0,"due_on":null,"due_at":null,"creator":{"id":4666033,"name":"Paul
+        Springett","avatar_url":"http://dge9rmgqjs8m1.cloudfront.net/global/default_avatar_v1_3/avatar.gif?r=3"},"url":"https://basecamp.com/2274488/api/v1/projects/2951531-new-project/todos/48545212-number-3.json"},{"id":48546382,"todolist_id":8268819,"position":3,"content":"My
+        todo","completed":false,"created_at":"2013-06-21T22:01:32.000Z","updated_at":"2013-06-21T22:01:32.000Z","comments_count":0,"due_on":null,"due_at":null,"creator":{"id":4666033,"name":"Paul
+        Springett","avatar_url":"http://dge9rmgqjs8m1.cloudfront.net/global/default_avatar_v1_3/avatar.gif?r=3"},"url":"https://basecamp.com/2274488/api/v1/projects/2951531-new-project/todos/48546382-my-todo.json"}],"completed":[]},"comments":[],"subscribers":[{"id":4666033,"name":"Paul
+        Springett"}]}'
+    http_version: 
+  recorded_at: Fri, 21 Jun 2013 22:11:54 GMT
+- request:
+    method: put
+    uri: https://basecamp.com/2274488/api/v1/projects/2951531/todolists/8268819.json
+    body:
+      encoding: UTF-8
+      string: ! '{"name":"Renamed todolist"}'
+    headers:
+      User-Agent:
+      - Faraday v0.8.7
+      Authorization:
+      - Basic YmN4LXRlc3QtdXNlcjpzZWNyZXQ=
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      server:
+      - nginx
+      date:
+      - Fri, 21 Jun 2013 22:12:35 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      status:
+      - 200 OK
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+      x-content-type-options:
+      - nosniff
+      x-ua-compatible:
+      - chrome=1
+      x-xhr-current-location:
+      - /2274488/api/v1/projects/2951531/todolists/8268819.json
+      x-asset-paths:
+      - ! '{"application.js":"application-eb8afc75ba8fcbb36b8518826dd32bc5.js","application.css":"application-18059b31e3ebdcca82003cfaf2564179.css"}'
+      etag:
+      - ! '"14816494a234cd89e748f90806a4f020"'
+      cache-control:
+      - max-age=0, private, must-revalidate
+      x-request-id:
+      - 0c97216d-f91d-40cc-85be-7c04190eac64
+      x-runtime:
+      - '0.259824'
+    body:
+      encoding: US-ASCII
+      string: ! '{"id":8268819,"name":"Renamed todolist","description":null,"created_at":"2013-06-21T21:50:13.000Z","updated_at":"2013-06-21T22:12:35.839Z","completed":false,"position":1,"remaining_count":3,"completed_count":0,"creator":{"id":4666033,"name":"Paul
+        Springett","avatar_url":"http://dge9rmgqjs8m1.cloudfront.net/global/default_avatar_v1_3/avatar.gif?r=3"},"todos":{"remaining":[{"id":48545209,"todolist_id":8268819,"position":1,"content":"Another
+        todo","completed":false,"created_at":"2013-06-21T21:50:24.000Z","updated_at":"2013-06-21T21:50:24.000Z","comments_count":0,"due_on":null,"due_at":null,"creator":{"id":4666033,"name":"Paul
+        Springett","avatar_url":"http://dge9rmgqjs8m1.cloudfront.net/global/default_avatar_v1_3/avatar.gif?r=3"},"url":"https://basecamp.com/2274488/api/v1/projects/2951531-new-project/todos/48545209-another-todo.json"},{"id":48545212,"todolist_id":8268819,"position":2,"content":"Number
+        3","completed":false,"created_at":"2013-06-21T21:50:27.000Z","updated_at":"2013-06-21T21:50:27.000Z","comments_count":0,"due_on":null,"due_at":null,"creator":{"id":4666033,"name":"Paul
+        Springett","avatar_url":"http://dge9rmgqjs8m1.cloudfront.net/global/default_avatar_v1_3/avatar.gif?r=3"},"url":"https://basecamp.com/2274488/api/v1/projects/2951531-new-project/todos/48545212-number-3.json"},{"id":48546382,"todolist_id":8268819,"position":3,"content":"My
+        todo","completed":false,"created_at":"2013-06-21T22:01:32.000Z","updated_at":"2013-06-21T22:01:32.000Z","comments_count":0,"due_on":null,"due_at":null,"creator":{"id":4666033,"name":"Paul
+        Springett","avatar_url":"http://dge9rmgqjs8m1.cloudfront.net/global/default_avatar_v1_3/avatar.gif?r=3"},"url":"https://basecamp.com/2274488/api/v1/projects/2951531-new-project/todos/48546382-my-todo.json"}],"completed":[]},"comments":[],"subscribers":[{"id":4666033,"name":"Paul
+        Springett"}]}'
+    http_version: 
+  recorded_at: Fri, 21 Jun 2013 22:12:36 GMT
+recorded_with: VCR 2.5.0

@@ -65,10 +65,32 @@ describe Bcx::Resources::Todolist, :vcr do
     end
   end
 
-  describe "/projects/123/todolists.json" do
+  describe "POST /projects/123/todolists.json" do
     it "should create a new todolist" do
       todolist = client.projects(2956584).todolists.create!(name: 'My todolist', description: 'This is a todolist')
       expect(todolist.created_at).not_to be_blank
+    end
+  end
+
+  describe "PUT /projects/2956584/todolists/8268819.json" do
+    it "should create a new todolist" do
+      todolist = client.projects(2951531).todolists(8268819).update!(name: 'Renamed todolist')
+      expect(todolist.name).to eq 'Renamed todolist'
+    end
+  end
+
+  describe "DELETE /projects/2956584/todolists/8268819.json" do
+    it "should create a new todolist" do
+      todolist = client.projects(2951531).todolists(8268819).update!(name: 'Renamed todolist')
+      expect(todolist.name).to eq 'Renamed todolist'
+    end
+
+    it "should delete a todolist" do
+      client.projects(2951531).todolists(8268819).delete!
+      expect { client.projects(2951531).todolists!(8268819) }.to raise_error { |error|
+        expect(error).to be_a Bcx::ResponseError
+        expect(error.status).to eq 404
+      }
     end
   end
 end
