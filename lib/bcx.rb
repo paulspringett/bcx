@@ -8,6 +8,7 @@ module Bcx
     autoload :Todo, 'bcx/resources/todo'
     autoload :Todolist, 'bcx/resources/todolist'
     autoload :Project, 'bcx/resources/project'
+    autoload :Person, 'bcx/resources/person'
   end
 
   module Client
