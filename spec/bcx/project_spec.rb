@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Bcx::Resources::Project, :vcr do
-  let(:client) { Bcx::Client.new(:http, login: 'bcx-test-user', password: 'secret') }
+  let(:client) { Bcx::Client::HTTP.new(login: 'bcx-test-user', password: 'secret') }
 
   describe "GET /projects" do
     let(:projects) { client.projects! }

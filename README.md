@@ -32,13 +32,13 @@ You can connect to the Basecamp API using the Bcx client. The client provides au
 #### HTTP Basic Auth
 
 ```ruby
-client = Bcx::Client.new(:http, login: 'username', password: 'secret')
+client = Bcx::Client::HTTP.new(login: 'username', password: 'secret')
 ```
 
 #### OAuth
 
 ```ruby
-client = Bcx::Client.new(:oauth, client_id: '1234567890', client_secret: '831994c4170', access_token: 'b02ff9345c3')
+client = Bcx::Client::OAuth.new(client_id: '1234567890', client_secret: '831994c4170', access_token: 'b02ff9345c3')
 ```
 
 You can get a `client_id` and `client_secret` from https://integrate.37signals.com/

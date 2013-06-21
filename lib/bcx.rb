@@ -10,7 +10,10 @@ module Bcx
     autoload :Project, 'bcx/resources/project'
   end
 
-  autoload :Client, 'bcx/client'
+  module Client
+    autoload :HTTP, 'bcx/client/http'
+    autoload :OAuth, 'bcx/client/oauth'
+  end
 
   class << self
     attr_accessor :configuration

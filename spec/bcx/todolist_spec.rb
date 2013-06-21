@@ -1,8 +1,7 @@
 require 'spec_helper'
 
 describe Bcx::Resources::Todolist, :vcr do
-  let(:client) { Bcx::Client.new(:http, login: 'bcx-test-user', password: 'secret') }
-
+  let(:client) { Bcx::Client::HTTP.new(login: 'bcx-test-user', password: 'secret') }
 
   describe "GET /projects/2937644/todolists.json" do
     let(:todolists) { client.projects(2956584).todolists! }
