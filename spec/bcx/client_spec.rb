@@ -31,23 +31,15 @@ describe Bcx::Client do
     end
   end
 
-  # TODO: test handling to reponse errors, with error codes
-  # it "should fail for invalid attributes" do
-  #   expect { client.projects.create!(name: '') }.to raise_error { |error|
-  #     expect(error).to be_a Bcx::ResponseError
-  #     expect(error.status).to eq 422
-  #   }
-  # end
+  describe "error handling", :vcr do
+    let(:client) { Bcx::Client::HTTP.new(login: 'bcx-test-user', password: 'secret') }
 
-  # Rescue a response error example
-  # begin
-  #   project = client.projects.create!(name: 'foo')
-  # rescue Bcx::ResponseError => response
-  #   puts response.status
-  #   => 422
-  #   puts response.body
-  #   => "Name cannot be blank"
-  # end
-
-
+    it "should raise exception" do
+      expect { client.projects.create!(name: '') }.to raise_error { |response|
+        expect(response).to be_a Bcx::ResponseError
+        expect(response.status).to eq 422
+        expect(response.errors).to include("name can't be blank")
+      }
+    end
+  end
 end
