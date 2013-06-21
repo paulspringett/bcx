@@ -1,6 +1,6 @@
 ## Bcx
 
-> NB. This is still alpha software and may not work as expected. It's also missing a lot of the Basecamp endpoints. Please feel free to contribute!
+> NB. This is still alpha software and may not work as expected. It's also missing a lot of the Basecamp endpoints. Please feel free [to contribute!](#contributing)
 
 Fully-fledged Ruby API wrapper for Basecamp Next
 
@@ -92,9 +92,21 @@ end
 
 ### Contributing
 
+The following endpoints are implemented and tested:
+
+* People
+* Projects
+* Todolists
+* Todos
+
+All other endpoints still need implementing, see the official
+[Basecamp Next API docs](https://github.com/37signals/bcx-api) for details on what to implement.
+
+### How to contribute
+
 1. Fork it
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Write your tests and check everything passes
 5. Push to the branch (`git push origin my-new-feature`)
-6. Create new Pull Request (into the development branch)
+6. Create new Pull Request (into the master branch)
