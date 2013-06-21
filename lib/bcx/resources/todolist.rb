@@ -34,6 +34,16 @@ module Bcx
     #
     #   client.projects(123).todolists.create!(name: 'My todolist', description: 'This is a todolist')
     #
+    # Update an existing todolist
+    # PUT /projects/123/todolists/456.json
+    #
+    #   client.projects(123).todolists(456).update!(name: 'Updated todolist')
+    #
+    # Delete a todolist
+    # DELETE /projects/123/todolists/456.json
+    #
+    #   client.projects(123).todolists(456).delete!
+    #
     class Todolist < Rapidash::Base
       resource :todos, class_name: 'Bcx::Resources::Todo'
 
