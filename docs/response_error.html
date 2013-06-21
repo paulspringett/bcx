@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>response_error.rb</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+  <link rel="stylesheet" media="all" href="docco.css" />
+</head>
+<body>
+  <div id="container">
+    <div id="background"></div>
+    
+      <ul id="jump_to">
+        <li>
+          <a class="large" href="javascript:void(0);">Jump To &hellip;</a>
+          <a class="small" href="javascript:void(0);">+</a>
+          <div id="jump_wrapper">
+          <div id="jump_page">
+            
+              
+              <a class="source" href="bcx.html">
+                bcx.rb
+              </a>
+            
+              
+              <a class="source" href="http.html">
+                http.rb
+              </a>
+            
+              
+              <a class="source" href="oauth.html">
+                oauth.rb
+              </a>
+            
+              
+              <a class="source" href="configuration.html">
+                configuration.rb
+              </a>
+            
+              
+              <a class="source" href="person.html">
+                person.rb
+              </a>
+            
+              
+              <a class="source" href="project.html">
+                project.rb
+              </a>
+            
+              
+              <a class="source" href="todo.html">
+                todo.rb
+              </a>
+            
+              
+              <a class="source" href="todolist.html">
+                todolist.rb
+              </a>
+            
+              
+              <a class="source" href="response_error.html">
+                response_error.rb
+              </a>
+            
+              
+              <a class="source" href="version.html">
+                version.rb
+              </a>
+            
+          </div>
+        </li>
+      </ul>
+    
+    <ul class="sections">
+        
+          <li id="title">
+              <div class="annotation">
+                  <h1>response_error.rb</h1>
+              </div>
+          </li>
+        
+        
+        
+        <li id="section-1">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-1">&#182;</a>
+              </div>
+              
+            </div>
+            
+            <div class="content"><div class='highlight'><pre><span class="class"><span class="keyword">module</span> <span class="title">Bcx</span></span>
+  <span class="class"><span class="keyword">class</span> <span class="title">ResponseError</span> <span class="inheritance">&lt; <span class="parent">Rapidash::ResponseError</span></span></span>
+
+    <span class="function"><span class="keyword">def</span> <span class="title">errors</span></span>
+      <span class="keyword">return</span> body <span class="keyword">if</span> body.kind_of?(<span class="constant">String</span>)
+
+      messages = []
+
+      body.each_pair <span class="keyword">do</span> |attribute, msgs|
+        msgs.each { |msg| messages.push <span class="string">"<span class="subst">#{attribute}</span> <span class="subst">#{msg}</span>"</span> }
+      <span class="keyword">end</span>
+
+      messages.join(<span class="string">', '</span>)
+    <span class="keyword">end</span>
+
+  <span class="keyword">end</span>
+<span class="keyword">end</span></pre></div></div>
+            
+        </li>
+        
+    </ul>
+  </div>
+</body>
+</html>

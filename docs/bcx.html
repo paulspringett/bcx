@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>bcx.rb</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+  <link rel="stylesheet" media="all" href="docco.css" />
+</head>
+<body>
+  <div id="container">
+    <div id="background"></div>
+    
+      <ul id="jump_to">
+        <li>
+          <a class="large" href="javascript:void(0);">Jump To &hellip;</a>
+          <a class="small" href="javascript:void(0);">+</a>
+          <div id="jump_wrapper">
+          <div id="jump_page">
+            
+              
+              <a class="source" href="bcx.html">
+                bcx.rb
+              </a>
+            
+              
+              <a class="source" href="http.html">
+                http.rb
+              </a>
+            
+              
+              <a class="source" href="oauth.html">
+                oauth.rb
+              </a>
+            
+              
+              <a class="source" href="configuration.html">
+                configuration.rb
+              </a>
+            
+              
+              <a class="source" href="person.html">
+                person.rb
+              </a>
+            
+              
+              <a class="source" href="project.html">
+                project.rb
+              </a>
+            
+              
+              <a class="source" href="todo.html">
+                todo.rb
+              </a>
+            
+              
+              <a class="source" href="todolist.html">
+                todolist.rb
+              </a>
+            
+              
+              <a class="source" href="response_error.html">
+                response_error.rb
+              </a>
+            
+              
+              <a class="source" href="version.html">
+                version.rb
+              </a>
+            
+          </div>
+        </li>
+      </ul>
+    
+    <ul class="sections">
+        
+          <li id="title">
+              <div class="annotation">
+                  <h1>bcx.rb</h1>
+              </div>
+          </li>
+        
+        
+        
+        <li id="section-1">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-1">&#182;</a>
+              </div>
+              
+            </div>
+            
+            <div class="content"><div class='highlight'><pre><span class="keyword">require</span> <span class="string">'rapidash'</span>
+<span class="keyword">require</span> <span class="string">'bcx/version'</span>
+
+<span class="class"><span class="keyword">module</span> <span class="title">Bcx</span></span>
+  autoload <span class="symbol">:Configuration</span>, <span class="string">'bcx/configuration'</span>
+
+  <span class="class"><span class="keyword">module</span> <span class="title">Resources</span></span>
+    autoload <span class="symbol">:Todo</span>, <span class="string">'bcx/resources/todo'</span>
+    autoload <span class="symbol">:Todolist</span>, <span class="string">'bcx/resources/todolist'</span>
+    autoload <span class="symbol">:Project</span>, <span class="string">'bcx/resources/project'</span>
+    autoload <span class="symbol">:Person</span>, <span class="string">'bcx/resources/person'</span>
+  <span class="keyword">end</span>
+
+  <span class="class"><span class="keyword">module</span> <span class="title">Client</span></span>
+    autoload <span class="symbol">:HTTP</span>, <span class="string">'bcx/client/http'</span>
+    autoload <span class="symbol">:OAuth</span>, <span class="string">'bcx/client/oauth'</span>
+  <span class="keyword">end</span>
+
+  <span class="class"><span class="keyword">class</span> <span class="inheritance">&lt;</span><span class="inheritance">&lt; <span class="parent">self</span></span></span>
+    attr_accessor <span class="symbol">:configuration</span>
+  <span class="keyword">end</span>
+
+  <span class="function"><span class="keyword">def</span> <span class="title"><span class="keyword">self</span></span>.<span class="title">configure</span></span>
+    <span class="keyword">self</span>.configuration ||= <span class="constant">Configuration</span>.new
+    <span class="keyword">yield</span>(configuration)
+  <span class="keyword">end</span>
+<span class="keyword">end</span>
+
+<span class="keyword">require</span> <span class="string">'bcx/response_error'</span>
+<span class="constant">Rapidash</span>.response_exception_class = <span class="constant">Bcx::ResponseError</span></pre></div></div>
+            
+        </li>
+        
+    </ul>
+  </div>
+</body>
+</html>

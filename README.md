@@ -90,6 +90,17 @@ rescue Bcx::ResponseError => response
 end
 ```
 
+### Documentation
+
+See the full [annotated source code](http://paulspringett.github.io/docs/bcx.html).
+
+The docs are generated using [Docco](http://jashkenas.github.io/docco/). To generate the docs, run:
+
+```shell
+$ npm install -g docco
+$ docco lib/**/*.rb
+```
+
 ### Contributing
 
 The following endpoints are implemented and tested:
