@@ -13,6 +13,8 @@ Fully-fledged Ruby API wrapper for Basecamp Next
               \/        \/      \_/
 ```
 
+[![Build Status](https://travis-ci.org/paulspringett/bcx.png?branch=master)](https://travis-ci.org/paulspringett/bcx)
+
 ### Installation
 
 ```shell
