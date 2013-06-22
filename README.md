@@ -92,7 +92,7 @@ end
 
 ### Documentation
 
-See the full [annotated source code](http://paulspringett.github.io/docs/bcx.html).
+See the full [annotated source code](http://paulspringett.github.io/bcx).
 
 The docs are generated using [Docco](http://jashkenas.github.io/docco/). To generate the docs, run:
 
