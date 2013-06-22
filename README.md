@@ -104,14 +104,7 @@ See the full [annotated source code](http://paulspringett.github.io/bcx).
 The docs are generated using [Docco](http://jashkenas.github.io/docco/). To generate the docs, run:
 
 ```bash
-$ git checkout master
-$ npm install -g docco
-$ docco lib/**/*.rb
-$ git commit -am "Updated docs"
-
-$ git checkout gh-pages
-$ git checkout master -- docs/ # Copy docs changes across and stage
-$ git commit -m "Updated docs on gh-pages"
+$ rake docs:generate
 ```
 
 ### Contributing
