@@ -92,9 +92,24 @@
             </div>
             
             <div class="content"><div class='highlight'><pre><span class="keyword">require</span> <span class="string">'rapidash'</span>
-<span class="keyword">require</span> <span class="string">'bcx/version'</span>
+<span class="keyword">require</span> <span class="string">'bcx/version'</span></pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-2">
+            <div class="annotation">
+              
+              <div class="pilwrap for-h1">
+                <a class="pilcrow" href="#section-2">&#182;</a>
+              </div>
+              <h1>Bcx</h1>
+<p>Fully-fledged Ruby API wrapper for Basecamp Next</p>
+<p> See the <a href="https://github.com/paulspringett/bcx#readme">README</a> for usage</p>
 
-<span class="class"><span class="keyword">module</span> <span class="title">Bcx</span></span>
+            </div>
+            
+            <div class="content"><div class='highlight'><pre><span class="class"><span class="keyword">module</span> <span class="title">Bcx</span></span>
   autoload <span class="symbol">:Configuration</span>, <span class="string">'bcx/configuration'</span>
 
   <span class="class"><span class="keyword">module</span> <span class="title">Resources</span></span>
@@ -111,15 +126,41 @@
 
   <span class="class"><span class="keyword">class</span> <span class="inheritance">&lt;</span><span class="inheritance">&lt; <span class="parent">self</span></span></span>
     attr_accessor <span class="symbol">:configuration</span>
-  <span class="keyword">end</span>
+  <span class="keyword">end</span></pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-3">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-3">&#182;</a>
+              </div>
+              <p>Expose configuration block</p>
 
-  <span class="function"><span class="keyword">def</span> <span class="title"><span class="keyword">self</span></span>.<span class="title">configure</span></span>
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>  <span class="function"><span class="keyword">def</span> <span class="title"><span class="keyword">self</span></span>.<span class="title">configure</span></span>
     <span class="keyword">self</span>.configuration ||= <span class="constant">Configuration</span>.new
     <span class="keyword">yield</span>(configuration)
   <span class="keyword">end</span>
-<span class="keyword">end</span>
+<span class="keyword">end</span></pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-4">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-4">&#182;</a>
+              </div>
+              <p>Use custom <code>Bcx::ResponseError</code> on top of Rapidash&#39;s error handling</p>
 
-<span class="keyword">require</span> <span class="string">'bcx/response_error'</span>
+            </div>
+            
+            <div class="content"><div class='highlight'><pre><span class="keyword">require</span> <span class="string">'bcx/response_error'</span>
 <span class="constant">Rapidash</span>.response_exception_class = <span class="constant">Bcx::ResponseError</span></pre></div></div>
             
         </li>
