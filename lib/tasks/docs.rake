@@ -16,6 +16,7 @@ namespace :docs do
     ensure_clean_git
     run "git checkout gh-pages"
     run "git push origin gh-pages"
+    run "git checkout master"
   end
 end
 
