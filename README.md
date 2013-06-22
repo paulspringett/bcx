@@ -1,6 +1,6 @@
 ## Bcx
 
-> NB. This is still alpha software and may not work as expected. It's also missing a lot of the Basecamp endpoints. Please feel free [to contribute!](#contributing)
+> NB. This gem is missing a lot of the Basecamp endpoints. Please feel free [to contribute!](#contributing)
 
 Fully-fledged Ruby API wrapper for Basecamp Next
 
@@ -47,7 +47,12 @@ You can get a `client_id` and `client_secret` from https://integrate.37signals.c
 
 ### Resources
 
-See the [full resource documentation](#todo) for all available API endpoints.
+The following resources are fully implemented and tested.
+
+* [People](http://paulspringett.github.io/bcx/docs/person.html)
+* [Projects](http://paulspringett.github.io/bcx/docs/project.html)
+* [Todolists](http://paulspringett.github.io/bcx/docs/todolist.html)
+* [Todos](http://paulspringett.github.io/bcx/docs/todo.html)
 
 #### Bang operators
 
