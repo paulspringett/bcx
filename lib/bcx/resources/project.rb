@@ -7,32 +7,32 @@ module Bcx
     # Fetch all projects
     # GET /projects.json
     #
-    #   client.projects!
+    #     client.projects!
     #
     # Fetch archived projects
     # GET /projects/archived.json
     #
-    #   clients.projects.archived!
+    #     clients.projects.archived!
     #
     # Fetch single project with ID of 123
     # GET /projects/123.json
     #
-    #   client.projects!(123)
+    #     client.projects!(123)
     #
     # Create a project
     # POST /projects.json
     #
-    #   client.projects.create!(name: 'Acme project', description: 'This is a new project')
+    #     client.projects.create!(name: 'Acme project', description: 'This is a new project')
     #
     # Update an existing project
     # PUT /projects/123.json
     #
-    #   client.projects(123).update!(description: 'A new description')
+    #     client.projects(123).update!(description: 'A new description')
     #
     # Delete a project
     # DELETE /projects/123.json
     #
-    #   client.projects(123).delete!
+    #     client.projects(123).delete!
     #
     class Project < Rapidash::Base
       resource :todolists
