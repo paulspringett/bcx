@@ -1,4 +1,5 @@
-# `Bcx::Resources::Person`
+# ## People
+#
 # Provides access to people resource
 #
 # #### Get all people on the account

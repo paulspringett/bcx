@@ -1,7 +1,7 @@
 require 'rapidash'
 require 'bcx/version'
 
-# # Bcx
+# ## Bcx
 # Fully-fledged Ruby API wrapper for Basecamp Next
 #
 #  See the [README](https://github.com/paulspringett/bcx#readme) for usage
