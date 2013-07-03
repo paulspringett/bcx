@@ -4,7 +4,7 @@ module Bcx
       method :oauth
 
       extension :json
-      encode_post_data_with :json
+      encode_request_with :json
 
       raise_errors
 
