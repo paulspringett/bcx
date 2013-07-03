@@ -1,4 +1,5 @@
 require 'rapidash'
+require 'rapidash/collection'
 require 'bcx/version'
 
 # ## Bcx
