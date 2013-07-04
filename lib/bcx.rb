@@ -4,7 +4,7 @@ require 'bcx/version'
 # ## Bcx
 # Fully-fledged Ruby API wrapper for Basecamp Next
 #
-#  See the [README](https://github.com/paulspringett/bcx#readme) for usage
+# See the [README](https://github.com/paulspringett/bcx#readme) for usage
 #
 module Bcx
   autoload :Configuration, 'bcx/configuration'

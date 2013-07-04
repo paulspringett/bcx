@@ -1,3 +1,12 @@
+# ## HTTP Client
+# 
+# Provides a client to access the Basecamp Next API using HTTP authentication
+#
+#
+# Example:
+#
+#     client = Bcx::Client::HTTP.new(login: 'username', password: 'secret')
+#
 module Bcx
   module Client
     class HTTP < Rapidash::Client

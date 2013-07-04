@@ -1,3 +1,11 @@
+# ## Oauth Client
+# 
+# Provides a client to access the Basecamp Next API via OAuth credentials
+#
+# Example:
+#
+#     client = Bcx::Client::OAuth.new(client_id: '1234567890', client_secret: '831994c4170', access_token: 'b02ff9345c3')
+#
 module Bcx
   module Client
     class OAuth < Rapidash::Client
