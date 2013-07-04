@@ -73,11 +73,6 @@
                 version.rb
               </a>
             
-              
-              <a class="source" href="collection.html">
-                collection.rb
-              </a>
-            
           </div>
         </li>
       </ul>
@@ -95,10 +90,14 @@
         <li id="section-1">
             <div class="annotation">
               
-              <div class="pilwrap ">
+              <div class="pilwrap for-h2">
                 <a class="pilcrow" href="#section-1">&#182;</a>
               </div>
-              
+              <h2>HTTP Client</h2>
+<p>Provides a client to access the Basecamp Next API using HTTP authentication</p>
+<p>Example:</p>
+<pre><code>client = Bcx::Client::HTTP.new(login: &#39;username&#39;, password: &#39;secret&#39;)</code></pre>
+
             </div>
             
             <div class="content"><div class='highlight'><pre><span class="class"><span class="keyword">module</span> <span class="title">Bcx</span></span>
