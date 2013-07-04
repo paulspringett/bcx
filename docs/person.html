@@ -2,7 +2,7 @@
 
 <html>
 <head>
-  <title>configuration.rb</title>
+  <title>person.rb</title>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
   <link rel="stylesheet" media="all" href="docco.css" />
@@ -86,7 +86,7 @@
         
           <li id="title">
               <div class="annotation">
-                  <h1>configuration.rb</h1>
+                  <h1>person.rb</h1>
               </div>
           </li>
         
@@ -95,37 +95,34 @@
         <li id="section-1">
             <div class="annotation">
               
-              <div class="pilwrap ">
+              <div class="pilwrap for-h2">
                 <a class="pilcrow" href="#section-1">&#182;</a>
               </div>
-              
-            </div>
-            
-            <div class="content"><div class='highlight'><pre><span class="class"><span class="keyword">module</span> <span class="title">Bcx</span></span></pre></div></div>
-            
-        </li>
-        
-        
-        <li id="section-2">
-            <div class="annotation">
-              
-              <div class="pilwrap ">
-                <a class="pilcrow" href="#section-2">&#182;</a>
-              </div>
-              <p>Bcx::Configuration
-Provides a configuration block for setting up the Bcx client
-Example:</p>
-<p>  Bcx.configure do |config|
-    config.account = &#39;1234567890&#39;
-  end</p>
+              <h2>People</h2>
+<p>Provides access to people resource</p>
+<h4>Get all people on the account</h4>
+<p><code>GET /people.json</code></p>
+<pre><code>client.people!</code></pre>
+<h4>Get a person</h4>
+<p><code>GET /people/123.json</code></p>
+<pre><code>client.people!(123)</code></pre>
+<h4>Get the current person</h4>
+<p><code>GET /people/me.json</code></p>
+<pre><code>client.people.me!</code></pre>
+<h4>Get assigned todos for a person</h4>
+<p><code>GET /people/1/assigned_todos.json</code></p>
+<pre><code>client.people(1).assigned_todos</code></pre>
+<h4>Delete a person</h4>
+<p><code>DELETE /people/123.json</code></p>
+<pre><code>client.people(123).delete!</code></pre>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>  <span class="class"><span class="keyword">class</span> <span class="title">Configuration</span></span>
-    attr_accessor <span class="symbol">:account</span>, <span class="symbol">:api_version</span>
-
-    <span class="function"><span class="keyword">def</span> <span class="title">initialize</span></span>
-      <span class="variable">@api_version</span> = <span class="string">'v1'</span>
+            <div class="content"><div class='highlight'><pre><span class="class"><span class="keyword">module</span> <span class="title">Bcx</span></span>
+  <span class="class"><span class="keyword">module</span> <span class="title">Resources</span></span>
+    <span class="class"><span class="keyword">class</span> <span class="title">Person</span> <span class="inheritance">&lt; <span class="parent">Rapidash::Base</span></span></span>
+      url <span class="symbol">:people</span>
+      collection <span class="symbol">:me</span>
     <span class="keyword">end</span>
   <span class="keyword">end</span>
 <span class="keyword">end</span></pre></div></div>

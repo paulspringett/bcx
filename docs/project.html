@@ -2,7 +2,7 @@
 
 <html>
 <head>
-  <title>configuration.rb</title>
+  <title>project.rb</title>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
   <link rel="stylesheet" media="all" href="docco.css" />
@@ -86,7 +86,7 @@
         
           <li id="title">
               <div class="annotation">
-                  <h1>configuration.rb</h1>
+                  <h1>project.rb</h1>
               </div>
           </li>
         
@@ -95,37 +95,40 @@
         <li id="section-1">
             <div class="annotation">
               
-              <div class="pilwrap ">
+              <div class="pilwrap for-h2">
                 <a class="pilcrow" href="#section-1">&#182;</a>
               </div>
-              
-            </div>
-            
-            <div class="content"><div class='highlight'><pre><span class="class"><span class="keyword">module</span> <span class="title">Bcx</span></span></pre></div></div>
-            
-        </li>
-        
-        
-        <li id="section-2">
-            <div class="annotation">
-              
-              <div class="pilwrap ">
-                <a class="pilcrow" href="#section-2">&#182;</a>
-              </div>
-              <p>Bcx::Configuration
-Provides a configuration block for setting up the Bcx client
-Example:</p>
-<p>  Bcx.configure do |config|
-    config.account = &#39;1234567890&#39;
-  end</p>
+              <h2>Projects</h2>
+<p>Provides access to projects resoource and other nested resources</p>
+<h4>Fetch all projects</h4>
+<p><code>GET /projects.json</code></p>
+<pre><code>client.projects!</code></pre>
+<h4>Fetch archived projects</h4>
+<p><code>GET /projects/archived.json</code></p>
+<pre><code>clients.projects.archived!</code></pre>
+<h4>Fetch single project with ID of 123</h4>
+<p><code>GET /projects/123.json</code></p>
+<pre><code>client.projects!(123)</code></pre>
+<h4>Create a project</h4>
+<p><code>POST /projects.json</code></p>
+<pre><code>client.projects.create!(name: &#39;Acme project&#39;, description: &#39;This is a new project&#39;)</code></pre>
+<h4>Update an existing project</h4>
+<p><code>PUT /projects/123.json</code></p>
+<pre><code>client.projects(123).update!(description: &#39;A new description&#39;)</code></pre>
+<h4>Delete a project</h4>
+<p><code>DELETE /projects/123.json</code></p>
+<pre><code>client.projects(123).delete!</code></pre>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>  <span class="class"><span class="keyword">class</span> <span class="title">Configuration</span></span>
-    attr_accessor <span class="symbol">:account</span>, <span class="symbol">:api_version</span>
+            <div class="content"><div class='highlight'><pre><span class="class"><span class="keyword">module</span> <span class="title">Bcx</span></span>
+  <span class="class"><span class="keyword">module</span> <span class="title">Resources</span></span>
+    <span class="class"><span class="keyword">class</span> <span class="title">Project</span> <span class="inheritance">&lt; <span class="parent">Rapidash::Base</span></span></span>
+      resource <span class="symbol">:todolists</span>
+      resource <span class="symbol">:todos</span>
+      resource <span class="symbol">:accesses</span>
 
-    <span class="function"><span class="keyword">def</span> <span class="title">initialize</span></span>
-      <span class="variable">@api_version</span> = <span class="string">'v1'</span>
+      collection <span class="symbol">:archived</span>
     <span class="keyword">end</span>
   <span class="keyword">end</span>
 <span class="keyword">end</span></pre></div></div>

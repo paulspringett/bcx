@@ -2,7 +2,7 @@
 
 <html>
 <head>
-  <title>configuration.rb</title>
+  <title>access.rb</title>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
   <link rel="stylesheet" media="all" href="docco.css" />
@@ -86,7 +86,7 @@
         
           <li id="title">
               <div class="annotation">
-                  <h1>configuration.rb</h1>
+                  <h1>access.rb</h1>
               </div>
           </li>
         
@@ -101,7 +101,8 @@
               
             </div>
             
-            <div class="content"><div class='highlight'><pre><span class="class"><span class="keyword">module</span> <span class="title">Bcx</span></span></pre></div></div>
+            <div class="content"><div class='highlight'><pre><span class="class"><span class="keyword">module</span> <span class="title">Bcx</span></span>
+  <span class="class"><span class="keyword">module</span> <span class="title">Resources</span></span></pre></div></div>
             
         </li>
         
@@ -112,20 +113,22 @@
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-2">&#182;</a>
               </div>
-              <p>Bcx::Configuration
-Provides a configuration block for setting up the Bcx client
-Example:</p>
-<p>  Bcx.configure do |config|
-    config.account = &#39;1234567890&#39;
-  end</p>
+              <p>Bcx::Resources::Access
+Provides access to accesses resource at per-project level</p>
+<p>Get accesses for a project
+GET /projects/1/accesses.json</p>
+<p>  client.projects(1).accesses!</p>
+<p>Grant access
+POST /projects/1/accesses.json</p>
+<p>  client.projects(1).accesses.create!(ids: [ 5, 6, 10])</p>
+<p>Revoke access
+DELETE /projects/1/accesses/1.json</p>
+<p>  client.projects(1).accesses(1).delete!</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>  <span class="class"><span class="keyword">class</span> <span class="title">Configuration</span></span>
-    attr_accessor <span class="symbol">:account</span>, <span class="symbol">:api_version</span>
+            <div class="content"><div class='highlight'><pre>    <span class="class"><span class="keyword">class</span> <span class="title">Access</span> <span class="inheritance">&lt; <span class="parent">Rapidash::Base</span></span></span>
 
-    <span class="function"><span class="keyword">def</span> <span class="title">initialize</span></span>
-      <span class="variable">@api_version</span> = <span class="string">'v1'</span>
     <span class="keyword">end</span>
   <span class="keyword">end</span>
 <span class="keyword">end</span></pre></div></div>
