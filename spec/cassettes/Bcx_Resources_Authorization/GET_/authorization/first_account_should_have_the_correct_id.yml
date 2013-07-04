@@ -1,0 +1,52 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://launchpad.37signals.com/authorization.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.8
+      content-type:
+      - application/json
+      Authorization:
+      - Bearer BAhbByIBsHsiZXhwaXJlc19hdCI6IjIwMTMtMDktMTNUMTI6NDk6MzBaIiwidXNlcl9pZHMiOlsxNzE3NDMwNV0sImNsaWVudF9pZCI6Ijc0OGNjOWM5NDlhZjg2ZjJlM2ZiMzU1NjRmN2UyMDliMWQyYzI3ZDIiLCJ2ZXJzaW9uIjoxLCJhcGlfZGVhZGJvbHQiOiJmZmE1OTgzMzQ3YTY2MWExM2Y1YWE3YTM0ODVhYzk4YiJ9dToJVGltZQ2sYRzA05PlxQ==--e995b8e9cb3cc37b7f4f90d967bb23d889145384
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      server:
+      - nginx
+      date:
+      - Fri, 30 Aug 2013 12:54:58 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      status:
+      - 200 OK
+      etag:
+      - ! '"08fb7932a74cfd43967d40c6b26b68d4"'
+      x-frame-options:
+      - SAMEORIGIN
+      x-ua-compatible:
+      - IE=Edge,chrome=1
+      x-runtime:
+      - '0.007646'
+      x-request-id:
+      - 4553850ce04a7ecfe50aeb802b895220
+      cache-control:
+      - max-age=0, private, must-revalidate
+      strict-transport-security:
+      - max-age=31536000
+    body:
+      encoding: US-ASCII
+      string: ! '{"accounts":[{"name":"Paul Springett''s Basecamp","href":"https://basecamp.com/2274488/api/v1","id":2274488,"product":"bcx"}],"identity":{"id":6967737,"last_name":"Springett","email_address":"paul@springett.me","first_name":"Paul"},"expires_at":"2013-09-13T12:49:30Z"}'
+    http_version: 
+  recorded_at: Fri, 30 Aug 2013 12:55:00 GMT
+recorded_with: VCR 2.5.0

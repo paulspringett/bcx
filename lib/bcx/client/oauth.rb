@@ -21,7 +21,7 @@ module Bcx
       resource :people, class_name: 'Bcx::Resources::Person'
 
       def initialize(options = {})
-        @account = Bcx.configuration.account
+        @account = options[:account] || Bcx.configuration.account
         @api_version = Bcx.configuration.api_version
 
         options[:site] = "https://basecamp.com/#{@account}/api/#{@api_version}"
