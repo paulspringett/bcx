@@ -53,6 +53,7 @@ The following resources are fully implemented and tested.
 * [Projects](http://paulspringett.github.io/bcx/docs/project.html)
 * [Todolists](http://paulspringett.github.io/bcx/docs/todolist.html)
 * [Todos](http://paulspringett.github.io/bcx/docs/todo.html)
+* [Accesses](http://paulspringett.github.io/bcx/docs/access.html)
 
 #### Bang operators
 
@@ -116,6 +117,7 @@ The following endpoints are implemented and tested:
 * Projects
 * Todolists
 * Todos
+* Accesses
 
 All other endpoints still need implementing, see the official
 [Basecamp Next API docs](https://github.com/37signals/bcx-api) for details on what to implement.
