@@ -37,6 +37,7 @@ module Bcx
     class Project < Rapidash::Base
       resource :todolists
       resource :todos
+      resource :accesses
 
       collection :archived
     end
