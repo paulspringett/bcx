@@ -21,13 +21,27 @@ Fully-fledged Ruby API wrapper for Basecamp Next
 $ gem install bcx
 ```
 
-Or if you are using Bundler
+Or if you are using Bundler, add
 
 ```ruby
 gem 'bcx'
 ```
 
+to your `Gemfile` and run
+
+```bash
+$ bundle install
+```
+
 ### Usage
+
+Configure Bcx for your Basecamp account
+
+```ruby
+Bcx.configure do |config|
+  config.account = '1234567890'
+end
+```
 
 You can connect to the Basecamp API using the Bcx client. The client provides authentication over HTTP or OAuth.
 
