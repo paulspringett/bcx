@@ -15,6 +15,7 @@ module Bcx
     autoload :Todolist, 'bcx/resources/todolist'
     autoload :Project, 'bcx/resources/project'
     autoload :Person, 'bcx/resources/person'
+    autoload :Access, 'bcx/resources/access'
   end
 
   module Client
