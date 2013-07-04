@@ -15,7 +15,7 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
   gem.version       = Bcx::VERSION
 
-  gem.add_runtime_dependency 'rapidash', '0.3.0.beta'
+  gem.add_runtime_dependency 'rapidash', '0.3.0.beta2'
 
   gem.add_development_dependency 'rake'
   gem.add_development_dependency 'rspec'
