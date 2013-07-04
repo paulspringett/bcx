@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>collection.rb</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+  <link rel="stylesheet" media="all" href="docco.css" />
+</head>
+<body>
+  <div id="container">
+    <div id="background"></div>
+    
+      <ul id="jump_to">
+        <li>
+          <a class="large" href="javascript:void(0);">Jump To &hellip;</a>
+          <a class="small" href="javascript:void(0);">+</a>
+          <div id="jump_wrapper">
+          <div id="jump_page">
+            
+              
+              <a class="source" href="configuration.html">
+                configuration.rb
+              </a>
+            
+              
+              <a class="source" href="response_error.html">
+                response_error.rb
+              </a>
+            
+              
+              <a class="source" href="version.html">
+                version.rb
+              </a>
+            
+              
+              <a class="source" href="collection.html">
+                collection.rb
+              </a>
+            
+          </div>
+        </li>
+      </ul>
+    
+    <ul class="sections">
+        
+          <li id="title">
+              <div class="annotation">
+                  <h1>collection.rb</h1>
+              </div>
+          </li>
+        
+        
+        
+        <li id="section-1">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-1">&#182;</a>
+              </div>
+              
+            </div>
+            
+            <div class="content"><div class='highlight'><pre><span class="class"><span class="keyword">module</span> <span class="title">Rapidash</span></span>
+  <span class="class"><span class="keyword">module</span> <span class="title">Collection</span></span>
+
+    <span class="function"><span class="keyword">def</span> <span class="title"><span class="keyword">self</span></span>.<span class="title">included</span><span class="params">(base)</span></span>
+      base.extend <span class="constant">ClassMethods</span>
+    <span class="keyword">end</span>
+
+    <span class="class"><span class="keyword">module</span> <span class="title">ClassMethods</span></span>
+      <span class="function"><span class="keyword">def</span> <span class="title">collection</span><span class="params">(name, attrs = {})</span></span>
+        path = attrs[<span class="symbol">:path</span>] || name.to_s
+        path.gsub!(<span class="regexp">/^\//</span>, <span class="string">''</span>)
+
+        method = attrs[<span class="symbol">:method</span>] || <span class="symbol">:get</span>
+
+        define_method(<span class="string">"<span class="subst">#{name}</span>!"</span>) <span class="keyword">do</span>
+          original_url = <span class="variable">@url</span>
+
+          <span class="variable">@url</span> += <span class="string">"/<span class="subst">#{path}</span>"</span>
+          <span class="variable">@options</span>[<span class="symbol">:method</span>] = method
+          result = call!
+
+          <span class="variable">@url</span> = original_url
+
+          result
+        <span class="keyword">end</span>
+      <span class="keyword">end</span>
+    <span class="keyword">end</span>
+  <span class="keyword">end</span>
+<span class="keyword">end</span>
+
+<span class="class"><span class="keyword">class</span> <span class="title">Rapidash::Base</span></span>
+  <span class="keyword">include</span> <span class="constant">Rapidash::Collection</span>
+<span class="keyword">end</span></pre></div></div>
+            
+        </li>
+        
+    </ul>
+  </div>
+</body>
+</html>
