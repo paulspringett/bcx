@@ -15,11 +15,16 @@ module Bcx
     autoload :Project, 'bcx/resources/project'
     autoload :Person, 'bcx/resources/person'
     autoload :Access, 'bcx/resources/access'
+    autoload :Authorization, 'bcx/resources/authorization'
   end
 
   module Client
     autoload :HTTP, 'bcx/client/http'
     autoload :OAuth, 'bcx/client/oauth'
+  end
+
+  module Launchpad
+    autoload :OAuth, 'bcx/launchpad/oauth'
   end
 
   class << self
