@@ -43,6 +43,29 @@ Bcx.configure do |config|
 end
 ```
 
+### Launchpad API client
+
+Before connecting to the Basecamp API you can optionally use this client to obtain a list of a user's available accounts and products. They may be a mix of Basecamp Next, Basecamp Classic, Campfire & other products.
+
+From 37signal's API docs:
+
+> This endpoint should be first request made after you've obtained a user's authorization token via OAuth. You can pick which account to use for a given product, and then base where to make requests to from the chosen account's href field.
+
+```ruby
+launchpad = Bcx::Launchpad::OAuth.new(client_id: '1234567890', client_secret: '831994c4170', access_token: 'b02ff9345c3')
+authorization = launchpad.authorization!
+
+authorization.identity.name
+# => "Joe Bloggs"
+
+authorization.accounts
+# => [...]
+```
+
+See [these docs](https://github.com/37signals/api/blob/master/sections/authentication.md#get-authorization) for more details.
+
+### Basecamp clients
+
 You can connect to the Basecamp API using the Bcx client. The client provides authentication over HTTP or OAuth.
 
 #### HTTP Basic Auth
@@ -58,6 +81,12 @@ client = Bcx::Client::OAuth.new(client_id: '1234567890', client_secret: '831994c
 ```
 
 You can get a `client_id` and `client_secret` from https://integrate.37signals.com/
+
+You can also pass an `:account` option to the OAuth client (allowing multiple clients in your app).
+
+```ruby
+client = Bcx::Client::OAuth.new(account: 99999999, ...)
+```
 
 ### Resources
 
