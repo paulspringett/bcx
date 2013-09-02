@@ -68,6 +68,8 @@ The following resources are fully implemented and tested.
 * [Todolists](http://paulspringett.github.io/bcx/docs/todolist.html)
 * [Todos](http://paulspringett.github.io/bcx/docs/todo.html)
 * [Accesses](http://paulspringett.github.io/bcx/docs/access.html)
+* [Authorization](http://paulspringett.github.io/bcx/docs/authorization.html) (Launchpad API)
+
 
 #### Bang operators
 
