@@ -5,7 +5,7 @@
   <title>todolist.rb</title>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
-  <link rel="stylesheet" media="all" href="docco.css" />
+  <link rel="stylesheet" media="all" href="../../../docco.css" />
 </head>
 <body>
   <div id="container">
@@ -19,58 +19,68 @@
           <div id="jump_page">
             
               
-              <a class="source" href="bcx.html">
-                bcx.rb
+              <a class="source" href="../../bcx.html">
+                lib/bcx.rb
               </a>
             
               
-              <a class="source" href="http.html">
-                http.rb
+              <a class="source" href="../client/http.html">
+                lib/bcx/client/http.rb
               </a>
             
               
-              <a class="source" href="oauth.html">
-                oauth.rb
+              <a class="source" href="../client/oauth.html">
+                lib/bcx/client/oauth.rb
               </a>
             
               
-              <a class="source" href="configuration.html">
-                configuration.rb
+              <a class="source" href="../configuration.html">
+                lib/bcx/configuration.rb
+              </a>
+            
+              
+              <a class="source" href="../launchpad/oauth.html">
+                lib/bcx/launchpad/oauth.rb
               </a>
             
               
               <a class="source" href="access.html">
-                access.rb
+                lib/bcx/resources/access.rb
+              </a>
+            
+              
+              <a class="source" href="authorization.html">
+                lib/bcx/resources/authorization.rb
               </a>
             
               
               <a class="source" href="person.html">
-                person.rb
+                lib/bcx/resources/person.rb
               </a>
             
               
               <a class="source" href="project.html">
-                project.rb
+                lib/bcx/resources/project.rb
               </a>
             
               
               <a class="source" href="todo.html">
-                todo.rb
+                lib/bcx/resources/todo.rb
               </a>
             
               
               <a class="source" href="todolist.html">
-                todolist.rb
+                lib/bcx/resources/todolist.rb
               </a>
             
               
-              <a class="source" href="response_error.html">
-                response_error.rb
+              <a class="source" href="../response_error.html">
+                lib/bcx/response_error.rb
               </a>
             
               
-              <a class="source" href="version.html">
-                version.rb
+              <a class="source" href="../version.html">
+                lib/bcx/version.rb
               </a>
             
           </div>
@@ -97,10 +107,10 @@
 <p>Provides access to todolist resoource both at the client level and per-project</p>
 <h4>Get all todolists for a project</h4>
 <p><code>GET /projects/123/todolists.json</code></p>
-<pre><code>client.projects(123).todolists!</code></pre>
+<pre><code>client.projects(<span class="number">123</span>).todolists!</code></pre>
 <h4>Get all completed todolists for a project</h4>
 <p><code>GET /projects/1/todolists/completed.json</code></p>
-<pre><code>client.projects(123).todolists.completed!</code></pre>
+<pre><code>client.projects(<span class="number">123</span>).todolists.completed!</code></pre>
 <h4>Get todolists for all projects</h4>
 <p><code>GET /todolists.json</code></p>
 <pre><code>client.todolists!</code></pre>
@@ -109,16 +119,16 @@
 <pre><code>client.todolists.completed!</code></pre>
 <h4>Get specific todolist including the todos</h4>
 <p><code>GET /projects/123/todolists/456.json</code></p>
-<pre><code>client.projects(123).todolists!(456)</code></pre>
+<pre><code>client.projects(<span class="number">123</span>).todolists!(<span class="number">456</span>)</code></pre>
 <h4>Create a new todolist</h4>
 <p><code>POST /projects/1/todolists.json</code></p>
-<pre><code>client.projects(123).todolists.create!(name: &#39;My todolist&#39;, description: &#39;This is a todolist&#39;)</code></pre>
+<pre><code>client.projects(<span class="number">123</span>).todolists.create!(<span class="symbol">name:</span> <span class="string">'My todolist'</span>, <span class="symbol">description:</span> <span class="string">'This is a todolist'</span>)</code></pre>
 <h4>Update an existing todolist</h4>
 <p><code>PUT /projects/123/todolists/456.json</code></p>
-<pre><code>client.projects(123).todolists(456).update!(name: &#39;Updated todolist&#39;)</code></pre>
+<pre><code>client.projects(<span class="number">123</span>).todolists(<span class="number">456</span>).update!(<span class="symbol">name:</span> <span class="string">'Updated todolist'</span>)</code></pre>
 <h4>Delete a todolist</h4>
 <p><code>DELETE /projects/123/todolists/456.json</code></p>
-<pre><code>client.projects(123).todolists(456).delete!</code></pre>
+<pre><code>client.projects(<span class="number">123</span>).todolists(<span class="number">456</span>).delete!</code></pre>
 
             </div>
             

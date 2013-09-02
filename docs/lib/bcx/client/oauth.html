@@ -2,10 +2,10 @@
 
 <html>
 <head>
-  <title>http.rb</title>
+  <title>oauth.rb</title>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
-  <link rel="stylesheet" media="all" href="docco.css" />
+  <link rel="stylesheet" media="all" href="../../../docco.css" />
 </head>
 <body>
   <div id="container">
@@ -19,58 +19,68 @@
           <div id="jump_page">
             
               
-              <a class="source" href="bcx.html">
-                bcx.rb
+              <a class="source" href="../../bcx.html">
+                lib/bcx.rb
               </a>
             
               
               <a class="source" href="http.html">
-                http.rb
+                lib/bcx/client/http.rb
               </a>
             
               
               <a class="source" href="oauth.html">
-                oauth.rb
+                lib/bcx/client/oauth.rb
               </a>
             
               
-              <a class="source" href="configuration.html">
-                configuration.rb
+              <a class="source" href="../configuration.html">
+                lib/bcx/configuration.rb
               </a>
             
               
-              <a class="source" href="access.html">
-                access.rb
+              <a class="source" href="../launchpad/oauth.html">
+                lib/bcx/launchpad/oauth.rb
               </a>
             
               
-              <a class="source" href="person.html">
-                person.rb
+              <a class="source" href="../resources/access.html">
+                lib/bcx/resources/access.rb
               </a>
             
               
-              <a class="source" href="project.html">
-                project.rb
+              <a class="source" href="../resources/authorization.html">
+                lib/bcx/resources/authorization.rb
               </a>
             
               
-              <a class="source" href="todo.html">
-                todo.rb
+              <a class="source" href="../resources/person.html">
+                lib/bcx/resources/person.rb
               </a>
             
               
-              <a class="source" href="todolist.html">
-                todolist.rb
+              <a class="source" href="../resources/project.html">
+                lib/bcx/resources/project.rb
               </a>
             
               
-              <a class="source" href="response_error.html">
-                response_error.rb
+              <a class="source" href="../resources/todo.html">
+                lib/bcx/resources/todo.rb
               </a>
             
               
-              <a class="source" href="version.html">
-                version.rb
+              <a class="source" href="../resources/todolist.html">
+                lib/bcx/resources/todolist.rb
+              </a>
+            
+              
+              <a class="source" href="../response_error.html">
+                lib/bcx/response_error.rb
+              </a>
+            
+              
+              <a class="source" href="../version.html">
+                lib/bcx/version.rb
               </a>
             
           </div>
@@ -81,7 +91,7 @@
         
           <li id="title">
               <div class="annotation">
-                  <h1>http.rb</h1>
+                  <h1>oauth.rb</h1>
               </div>
           </li>
         
@@ -93,17 +103,17 @@
               <div class="pilwrap for-h2">
                 <a class="pilcrow" href="#section-1">&#182;</a>
               </div>
-              <h2>HTTP Client</h2>
-<p>Provides a client to access the Basecamp Next API using HTTP authentication</p>
+              <h2>Oauth Client</h2>
+<p>Provides a client to access the Basecamp Next API via OAuth credentials</p>
 <p>Example:</p>
-<pre><code>client = Bcx::Client::HTTP.new(login: &#39;username&#39;, password: &#39;secret&#39;)</code></pre>
+<pre><code>client = <span class="constant">Bcx::Client::OAuth</span>.new(<span class="symbol">client_id:</span> <span class="string">'1234567890'</span>, <span class="symbol">client_secret:</span> <span class="string">'831994c4170'</span>, <span class="symbol">access_token:</span> <span class="string">'b02ff9345c3'</span>)</code></pre>
 
             </div>
             
             <div class="content"><div class='highlight'><pre><span class="class"><span class="keyword">module</span> <span class="title">Bcx</span></span>
   <span class="class"><span class="keyword">module</span> <span class="title">Client</span></span>
-    <span class="class"><span class="keyword">class</span> <span class="title">HTTP</span> <span class="inheritance">&lt; <span class="parent">Rapidash::Client</span></span></span>
-      method <span class="symbol">:http</span>
+    <span class="class"><span class="keyword">class</span> <span class="title">OAuth</span> <span class="inheritance">&lt; <span class="parent">Rapidash::Client</span></span></span>
+      method <span class="symbol">:oauth</span>
 
       extension <span class="symbol">:json</span>
       encode_request_with <span class="symbol">:json</span>
@@ -115,10 +125,12 @@
       resource <span class="symbol">:people</span>, <span class="symbol">class_name:</span> <span class="string">'Bcx::Resources::Person'</span>
 
       <span class="function"><span class="keyword">def</span> <span class="title">initialize</span><span class="params">(options = {})</span></span>
-        <span class="variable">@account</span> = <span class="constant">Bcx</span>.configuration.account
+        <span class="variable">@account</span> = options[<span class="symbol">:account</span>] || <span class="constant">Bcx</span>.configuration.account
         <span class="variable">@api_version</span> = <span class="constant">Bcx</span>.configuration.api_version
 
-        <span class="keyword">self</span>.<span class="keyword">class</span>.site(<span class="string">"https://basecamp.com/<span class="subst">#{<span class="variable">@account</span>}</span>/api/<span class="subst">#{<span class="variable">@api_version</span>}</span>/"</span>)
+        options[<span class="symbol">:site</span>] = <span class="string">"https://basecamp.com/<span class="subst">#{<span class="variable">@account</span>}</span>/api/<span class="subst">#{<span class="variable">@api_version</span>}</span>"</span>
+        options[<span class="symbol">:uid</span>] ||= options[<span class="symbol">:client_id</span>]
+        options[<span class="symbol">:secret</span>] ||= options[<span class="symbol">:client_secret</span>]
 
         <span class="keyword">super</span>(options)
       <span class="keyword">end</span>

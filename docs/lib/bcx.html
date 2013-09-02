@@ -5,7 +5,7 @@
   <title>bcx.rb</title>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
-  <link rel="stylesheet" media="all" href="docco.css" />
+  <link rel="stylesheet" media="all" href="../docco.css" />
 </head>
 <body>
   <div id="container">
@@ -20,57 +20,67 @@
             
               
               <a class="source" href="bcx.html">
-                bcx.rb
+                lib/bcx.rb
               </a>
             
               
-              <a class="source" href="http.html">
-                http.rb
+              <a class="source" href="bcx/client/http.html">
+                lib/bcx/client/http.rb
               </a>
             
               
-              <a class="source" href="oauth.html">
-                oauth.rb
+              <a class="source" href="bcx/client/oauth.html">
+                lib/bcx/client/oauth.rb
               </a>
             
               
-              <a class="source" href="configuration.html">
-                configuration.rb
+              <a class="source" href="bcx/configuration.html">
+                lib/bcx/configuration.rb
               </a>
             
               
-              <a class="source" href="access.html">
-                access.rb
+              <a class="source" href="bcx/launchpad/oauth.html">
+                lib/bcx/launchpad/oauth.rb
               </a>
             
               
-              <a class="source" href="person.html">
-                person.rb
+              <a class="source" href="bcx/resources/access.html">
+                lib/bcx/resources/access.rb
               </a>
             
               
-              <a class="source" href="project.html">
-                project.rb
+              <a class="source" href="bcx/resources/authorization.html">
+                lib/bcx/resources/authorization.rb
               </a>
             
               
-              <a class="source" href="todo.html">
-                todo.rb
+              <a class="source" href="bcx/resources/person.html">
+                lib/bcx/resources/person.rb
               </a>
             
               
-              <a class="source" href="todolist.html">
-                todolist.rb
+              <a class="source" href="bcx/resources/project.html">
+                lib/bcx/resources/project.rb
               </a>
             
               
-              <a class="source" href="response_error.html">
-                response_error.rb
+              <a class="source" href="bcx/resources/todo.html">
+                lib/bcx/resources/todo.rb
               </a>
             
               
-              <a class="source" href="version.html">
-                version.rb
+              <a class="source" href="bcx/resources/todolist.html">
+                lib/bcx/resources/todolist.rb
+              </a>
+            
+              
+              <a class="source" href="bcx/response_error.html">
+                lib/bcx/response_error.rb
+              </a>
+            
+              
+              <a class="source" href="bcx/version.html">
+                lib/bcx/version.rb
               </a>
             
           </div>
@@ -123,11 +133,16 @@
     autoload <span class="symbol">:Project</span>, <span class="string">'bcx/resources/project'</span>
     autoload <span class="symbol">:Person</span>, <span class="string">'bcx/resources/person'</span>
     autoload <span class="symbol">:Access</span>, <span class="string">'bcx/resources/access'</span>
+    autoload <span class="symbol">:Authorization</span>, <span class="string">'bcx/resources/authorization'</span>
   <span class="keyword">end</span>
 
   <span class="class"><span class="keyword">module</span> <span class="title">Client</span></span>
     autoload <span class="symbol">:HTTP</span>, <span class="string">'bcx/client/http'</span>
     autoload <span class="symbol">:OAuth</span>, <span class="string">'bcx/client/oauth'</span>
+  <span class="keyword">end</span>
+
+  <span class="class"><span class="keyword">module</span> <span class="title">Launchpad</span></span>
+    autoload <span class="symbol">:OAuth</span>, <span class="string">'bcx/launchpad/oauth'</span>
   <span class="keyword">end</span>
 
   <span class="class"><span class="keyword">class</span> <span class="inheritance">&lt;</span><span class="inheritance">&lt; <span class="parent">self</span></span></span>

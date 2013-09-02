@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <title>access.rb</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+  <link rel="stylesheet" media="all" href="../../../docco.css" />
+</head>
+<body>
+  <div id="container">
+    <div id="background"></div>
+    
+      <ul id="jump_to">
+        <li>
+          <a class="large" href="javascript:void(0);">Jump To &hellip;</a>
+          <a class="small" href="javascript:void(0);">+</a>
+          <div id="jump_wrapper">
+          <div id="jump_page">
+            
+              
+              <a class="source" href="../../bcx.html">
+                lib/bcx.rb
+              </a>
+            
+              
+              <a class="source" href="../client/http.html">
+                lib/bcx/client/http.rb
+              </a>
+            
+              
+              <a class="source" href="../client/oauth.html">
+                lib/bcx/client/oauth.rb
+              </a>
+            
+              
+              <a class="source" href="../configuration.html">
+                lib/bcx/configuration.rb
+              </a>
+            
+              
+              <a class="source" href="../launchpad/oauth.html">
+                lib/bcx/launchpad/oauth.rb
+              </a>
+            
+              
+              <a class="source" href="access.html">
+                lib/bcx/resources/access.rb
+              </a>
+            
+              
+              <a class="source" href="authorization.html">
+                lib/bcx/resources/authorization.rb
+              </a>
+            
+              
+              <a class="source" href="person.html">
+                lib/bcx/resources/person.rb
+              </a>
+            
+              
+              <a class="source" href="project.html">
+                lib/bcx/resources/project.rb
+              </a>
+            
+              
+              <a class="source" href="todo.html">
+                lib/bcx/resources/todo.rb
+              </a>
+            
+              
+              <a class="source" href="todolist.html">
+                lib/bcx/resources/todolist.rb
+              </a>
+            
+              
+              <a class="source" href="../response_error.html">
+                lib/bcx/response_error.rb
+              </a>
+            
+              
+              <a class="source" href="../version.html">
+                lib/bcx/version.rb
+              </a>
+            
+          </div>
+        </li>
+      </ul>
+    
+    <ul class="sections">
+        
+          <li id="title">
+              <div class="annotation">
+                  <h1>access.rb</h1>
+              </div>
+          </li>
+        
+        
+        
+        <li id="section-1">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-1">&#182;</a>
+              </div>
+              <p>Bcx::Resources::Access</p>
+<p>Provides access to accesses resource at per-project level</p>
+<h4>Get accesses for a project</h4>
+<p><code>GET /projects/1/accesses.json</code></p>
+<pre><code>client.projects(<span class="number">1</span>).accesses!</code></pre>
+<h4>Grant access</h4>
+<p><code>POST /projects/1/accesses.json</code></p>
+<pre><code>client.projects(<span class="number">1</span>).accesses.create!(<span class="symbol">ids:</span> [ <span class="number">5</span>, <span class="number">6</span>, <span class="number">10</span>])</code></pre>
+<h4>Revoke access</h4>
+<p><code>DELETE /projects/1/accesses/1.json</code></p>
+<pre><code>client.projects(<span class="number">1</span>).accesses(<span class="number">1</span>).delete!</code></pre>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre><span class="class"><span class="keyword">module</span> <span class="title">Bcx</span></span>
+  <span class="class"><span class="keyword">module</span> <span class="title">Resources</span></span>
+    <span class="class"><span class="keyword">class</span> <span class="title">Access</span> <span class="inheritance">&lt; <span class="parent">Rapidash::Base</span></span></span>
+
+    <span class="keyword">end</span>
+  <span class="keyword">end</span>
+<span class="keyword">end</span></pre></div></div>
+            
+        </li>
+        
+    </ul>
+  </div>
+</body>
+</html>
