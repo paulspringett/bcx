@@ -156,13 +156,7 @@ $ rake docs:generate
 
 ### Contributing
 
-The following endpoints are implemented and tested:
-
-* People
-* Projects
-* Todolists
-* Todos
-* Accesses
+The endpoints listed under [Resources](https://github.com/paulspringett/bcx#resources) above are implemented and tested.
 
 All other endpoints still need implementing, see the official
 [Basecamp Next API docs](https://github.com/37signals/bcx-api) for details on what to implement.
