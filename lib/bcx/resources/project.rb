@@ -38,6 +38,7 @@ module Bcx
       resource :todolists
       resource :todos
       resource :accesses
+      resource :comments
 
       collection :archived
     end

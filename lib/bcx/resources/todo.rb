@@ -32,6 +32,7 @@
 module Bcx
   module Resources
     class Todo < Rapidash::Base
+      resource :comments
     end
   end
 end

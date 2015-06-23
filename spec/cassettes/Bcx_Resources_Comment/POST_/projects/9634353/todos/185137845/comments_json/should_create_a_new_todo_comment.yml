@@ -1,0 +1,114 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://basecamp.com/2274488/api/v1/projects/9634353/todos/185137845/comments.json
+    body:
+      encoding: UTF-8
+      string: '{"content":"New Todo comment"}'
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      Authorization:
+      - Basic N3IwZ2d6QGdtYWlsLmNabTpCQ1BabGhma3IyNjU=
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 201
+      message: 
+    headers:
+      server:
+      - openresty
+      date:
+      - Tue, 23 Jun 2015 14:38:12 GMT
+      content-type:
+      - application/json; charset=utf-8
+      connection:
+      - Keep-Alive
+      status:
+      - 201 Created
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+      x-content-type-options:
+      - nosniff
+      x-asset-paths:
+      - '{"desktop.js":"desktop-ffff6ab2353adfd35273439e2b190a97.js","desktop.css":"desktop-d7e97abbc9c3540e9ab5d7537c0b4a05.css"}'
+      etag:
+      - '"addf15375d45daec2e5d07cb0e79b1ea"'
+      cache-control:
+      - max-age=0, private, must-revalidate
+      x-request-id:
+      - 25831a68-f0c7-44be-ba66-e574fed1cb33
+      x-runtime:
+      - '0.238668'
+      x-queue-time:
+      - '0.0011718273162841797'
+      timing-allow-origin:
+      - "*"
+      vary:
+      - Accept-Encoding
+      content-length:
+      - '391'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":297586609,"content":"New Todo comment","created_at":"2015-06-23T21:38:12.210+07:00","updated_at":"2015-06-23T21:38:12.210+07:00","private":false,"trashed":false,"attachments":[],"creator":{"id":9056757,"name":"Kosta
+        Korenkov","avatar_url":"http://cdn.37img.com/global/8763e3387c99c11693eef859f5e1ebc30010/avatar.gif?r=3","fullsize_avatar_url":"https://cdn.37img.com/global/8763e3387c99c11693eef859f5e1ebc30010/original.gif?r=3"},"topic_url":"https://basecamp.com/2274488/api/v1/projects/9634353/todos/185137845.json","topic_app_url":"https://basecamp.com/2274488/projects/9634353/todos/185137845"}'
+    http_version: 
+  recorded_at: Tue, 23 Jun 2015 14:38:12 GMT
+- request:
+    method: post
+    uri: https://basecamp.com/2274488/api/v1/projects/9634353/todos/185137845/comments.json
+    body:
+      encoding: UTF-8
+      string: '{"content":"New Todo comment"}'
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      Authorization:
+      - Basic YmN4LXRlc3QtdXNlcjpzZWNyZXQ=
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      server:
+      - openresty
+      date:
+      - Tue, 23 Jun 2015 14:40:26 GMT
+      content-type:
+      - application/json
+      connection:
+      - Keep-Alive
+      status:
+      - 404 Not Found
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+      x-content-type-options:
+      - nosniff
+      reason:
+      - Account Inactive
+      cache-control:
+      - no-cache
+      x-request-id:
+      - 7ad69bbf-b260-4a7b-a0df-d21ad2e2414c
+      x-runtime:
+      - '0.035408'
+      x-queue-time:
+      - '0.0004937648773193359'
+      vary:
+      - Accept-Encoding
+      content-length:
+      - '23'
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    http_version: 
+  recorded_at: Tue, 23 Jun 2015 14:40:26 GMT
+recorded_with: VCR 2.9.3

@@ -1,0 +1,114 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://basecamp.com/2274488/api/v1/projects/9634353/todolists/29123043/comments.json
+    body:
+      encoding: UTF-8
+      string: '{"content":"New TodoList comment"}'
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      Authorization:
+      - Basic N2IwZ2d5QGdtYWlsLmNvbTpCQ1BmbGhma2IyNjU=
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 201
+      message: 
+    headers:
+      server:
+      - openresty
+      date:
+      - Tue, 23 Jun 2015 14:38:13 GMT
+      content-type:
+      - application/json; charset=utf-8
+      connection:
+      - Keep-Alive
+      status:
+      - 201 Created
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+      x-content-type-options:
+      - nosniff
+      x-asset-paths:
+      - '{"desktop.js":"desktop-ffff6ab2353adfd35273439e2b190a97.js","desktop.css":"desktop-d7e97abbc9c3540e9ab5d7537c0b4a05.css"}'
+      etag:
+      - '"e0151f0dceb5a1754f860b907ca2fe99"'
+      cache-control:
+      - max-age=0, private, must-revalidate
+      x-request-id:
+      - d7cf177a-f7f0-480b-951c-06b4ce9eaa36
+      x-runtime:
+      - '0.217618'
+      x-queue-time:
+      - '0.0010294914245605469'
+      timing-allow-origin:
+      - "*"
+      vary:
+      - Accept-Encoding
+      content-length:
+      - '400'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":297586622,"content":"New TodoList comment","created_at":"2015-06-23T21:38:13.156+07:00","updated_at":"2015-06-23T21:38:13.156+07:00","private":false,"trashed":false,"attachments":[],"creator":{"id":9056757,"name":"Kosta
+        Korenkov","avatar_url":"http://cdn.37img.com/global/8763e3387c99c11693eef859f5e1ebc30010/avatar.gif?r=3","fullsize_avatar_url":"https://cdn.37img.com/global/8763e3387c99c11693eef859f5e1ebc30010/original.gif?r=3"},"topic_url":"https://basecamp.com/2274488/api/v1/projects/9634353/todolists/29123043.json","topic_app_url":"https://basecamp.com/2274488/projects/9634353/todolists/29123043"}'
+    http_version: 
+  recorded_at: Tue, 23 Jun 2015 14:38:13 GMT
+- request:
+    method: post
+    uri: https://basecamp.com/2274488/api/v1/projects/9634353/todolists/29123043/comments.json
+    body:
+      encoding: UTF-8
+      string: '{"content":"New TodoList comment"}'
+    headers:
+      User-Agent:
+      - Faraday v0.8.9
+      Authorization:
+      - Basic YmN4LXRlc3QtdXNlcjpzZWNyZXQ=
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      server:
+      - openresty
+      date:
+      - Tue, 23 Jun 2015 14:40:27 GMT
+      content-type:
+      - application/json
+      connection:
+      - Keep-Alive
+      status:
+      - 404 Not Found
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+      x-content-type-options:
+      - nosniff
+      reason:
+      - Account Inactive
+      cache-control:
+      - no-cache
+      x-request-id:
+      - 4046a382-1e93-4f8d-84b3-882afb287dfe
+      x-runtime:
+      - '0.036859'
+      x-queue-time:
+      - '0.00047588348388671875'
+      vary:
+      - Accept-Encoding
+      content-length:
+      - '23'
+    body:
+      encoding: ASCII-8BIT
+      string: ''
+    http_version: 
+  recorded_at: Tue, 23 Jun 2015 14:40:27 GMT
+recorded_with: VCR 2.9.3
