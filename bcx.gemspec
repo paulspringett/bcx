@@ -14,6 +14,7 @@ Gem::Specification.new do |gem|
   gem.name          = "bcx"
   gem.require_paths = ["lib"]
   gem.version       = Bcx::VERSION
+  gem.license       = 'MIT'
 
   gem.add_runtime_dependency 'rapidash', '~> 0.3.0'
 
