@@ -4,10 +4,12 @@ namespace :docs do
     ensure_clean_git
     run "git checkout #{branch}"
     run "docco lib/**/*.rb"
-    run "git commit -am 'Updated documentation'"
+    run "git add -A ."
+    run "git commit -m 'Updated documentation'"
     run "git checkout gh-pages"
     run "git checkout #{branch} -- docs/" # Copy docs changes across and stage
-    run "git commit -am 'Updated docs on gh-pages'"
+    run "git add -A ."
+    run "git commit -m 'Updated docs on gh-pages'"
     run "git checkout #{branch}"
   end
 
