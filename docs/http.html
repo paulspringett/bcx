@@ -2,7 +2,7 @@
 
 <html>
 <head>
-  <title>configuration.rb</title>
+  <title>http.rb</title>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
   <link rel="stylesheet" media="all" href="docco.css" />
@@ -98,7 +98,7 @@
         
           <li id="title">
               <div class="annotation">
-                  <h1>configuration.rb</h1>
+                  <h1>http.rb</h1>
               </div>
           </li>
         
@@ -110,21 +110,35 @@
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-1">&#182;</a>
               </div>
-              <h2 id="configuration">Configuration</h2>
-<p>Provides a configuration block for setting up the Bcx client</p>
+              <h2 id="http-client">HTTP Client</h2>
+<p>Provides a client to access the Basecamp Next API using HTTP authentication</p>
 <p>Example:</p>
-<pre><code><span class="hljs-constant">Bcx</span>.configure <span class="hljs-keyword">do</span> |config|
-  config.account = <span class="hljs-string">'1234567890'</span>
-<span class="hljs-keyword">end</span>
+<pre><code>client = <span class="hljs-constant">Bcx::Client::HTTP</span>.new(<span class="hljs-symbol">login:</span> <span class="hljs-string">'username'</span>, <span class="hljs-symbol">password:</span> <span class="hljs-string">'secret'</span>)
 </code></pre>
             </div>
             
             <div class="content"><div class='highlight'><pre><span class="hljs-class"><span class="hljs-keyword">module</span> <span class="hljs-title">Bcx</span></span>
-  <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Configuration</span></span>
-    <span class="hljs-keyword">attr_accessor</span> <span class="hljs-symbol">:account</span>, <span class="hljs-symbol">:api_version</span>
+  <span class="hljs-class"><span class="hljs-keyword">module</span> <span class="hljs-title">Client</span></span>
+    <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">HTTP</span> <span class="hljs-inheritance">&lt; <span class="hljs-parent">Rapidash::Client</span></span></span>
+      method <span class="hljs-symbol">:http</span>
 
-    <span class="hljs-function"><span class="hljs-keyword">def</span> </span>initialize
-      <span class="hljs-variable">@api_version</span> = <span class="hljs-string">'v1'</span>
+      extension <span class="hljs-symbol">:json</span>
+      encode_request_with <span class="hljs-symbol">:json</span>
+
+      raise_errors
+
+      resource <span class="hljs-symbol">:projects</span>, <span class="hljs-symbol">class_name:</span> <span class="hljs-string">'Bcx::Resources::Project'</span>
+      resource <span class="hljs-symbol">:todolists</span>, <span class="hljs-symbol">class_name:</span> <span class="hljs-string">'Bcx::Resources::Todolist'</span>
+      resource <span class="hljs-symbol">:people</span>, <span class="hljs-symbol">class_name:</span> <span class="hljs-string">'Bcx::Resources::Person'</span>
+
+      <span class="hljs-function"><span class="hljs-keyword">def</span> </span>initialize(options = {})
+        <span class="hljs-variable">@account</span> = <span class="hljs-constant">Bcx</span>.configuration.account
+        <span class="hljs-variable">@api_version</span> = <span class="hljs-constant">Bcx</span>.configuration.api_version
+
+        <span class="hljs-keyword">self</span>.<span class="hljs-keyword">class</span>.site(<span class="hljs-string">"https://basecamp.com/<span class="hljs-subst">#{<span class="hljs-variable">@account</span>}</span>/api/<span class="hljs-subst">#{<span class="hljs-variable">@api_version</span>}</span>/"</span>)
+
+        <span class="hljs-keyword">super</span>(options)
+      <span class="hljs-keyword">end</span>
     <span class="hljs-keyword">end</span>
   <span class="hljs-keyword">end</span>
 <span class="hljs-keyword">end</span></pre></div></div>

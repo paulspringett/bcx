@@ -2,7 +2,7 @@
 
 <html>
 <head>
-  <title>configuration.rb</title>
+  <title>access.rb</title>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
   <link rel="stylesheet" media="all" href="docco.css" />
@@ -98,7 +98,7 @@
         
           <li id="title">
               <div class="annotation">
-                  <h1>configuration.rb</h1>
+                  <h1>access.rb</h1>
               </div>
           </li>
         
@@ -110,21 +110,24 @@
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-1">&#182;</a>
               </div>
-              <h2 id="configuration">Configuration</h2>
-<p>Provides a configuration block for setting up the Bcx client</p>
-<p>Example:</p>
-<pre><code><span class="hljs-constant">Bcx</span>.configure <span class="hljs-keyword">do</span> |config|
-  config.account = <span class="hljs-string">'1234567890'</span>
-<span class="hljs-keyword">end</span>
+              <p>Bcx::Resources::Access</p>
+<p>Provides access to accesses resource at per-project level</p>
+<h4 id="get-accesses-for-a-project">Get accesses for a project</h4>
+<p><code>GET /projects/1/accesses.json</code></p>
+<pre><code>client.projects(<span class="hljs-number">1</span>).accesses!
+</code></pre><h4 id="grant-access">Grant access</h4>
+<p><code>POST /projects/1/accesses.json</code></p>
+<pre><code>client.projects(<span class="hljs-number">1</span>).accesses.create!(<span class="hljs-symbol">ids:</span> [ <span class="hljs-number">5</span>, <span class="hljs-number">6</span>, <span class="hljs-number">10</span>])
+</code></pre><h4 id="revoke-access">Revoke access</h4>
+<p><code>DELETE /projects/1/accesses/1.json</code></p>
+<pre><code>client.projects(<span class="hljs-number">1</span>).accesses(<span class="hljs-number">1</span>).delete!
 </code></pre>
             </div>
             
             <div class="content"><div class='highlight'><pre><span class="hljs-class"><span class="hljs-keyword">module</span> <span class="hljs-title">Bcx</span></span>
-  <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Configuration</span></span>
-    <span class="hljs-keyword">attr_accessor</span> <span class="hljs-symbol">:account</span>, <span class="hljs-symbol">:api_version</span>
+  <span class="hljs-class"><span class="hljs-keyword">module</span> <span class="hljs-title">Resources</span></span>
+    <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Access</span> <span class="hljs-inheritance">&lt; <span class="hljs-parent">Rapidash::Base</span></span></span>
 
-    <span class="hljs-function"><span class="hljs-keyword">def</span> </span>initialize
-      <span class="hljs-variable">@api_version</span> = <span class="hljs-string">'v1'</span>
     <span class="hljs-keyword">end</span>
   <span class="hljs-keyword">end</span>
 <span class="hljs-keyword">end</span></pre></div></div>

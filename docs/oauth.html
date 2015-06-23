@@ -2,7 +2,7 @@
 
 <html>
 <head>
-  <title>configuration.rb</title>
+  <title>oauth.rb</title>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
   <link rel="stylesheet" media="all" href="docco.css" />
@@ -98,7 +98,7 @@
         
           <li id="title">
               <div class="annotation">
-                  <h1>configuration.rb</h1>
+                  <h1>oauth.rb</h1>
               </div>
           </li>
         
@@ -110,21 +110,28 @@
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-1">&#182;</a>
               </div>
-              <h2 id="configuration">Configuration</h2>
-<p>Provides a configuration block for setting up the Bcx client</p>
-<p>Example:</p>
-<pre><code><span class="hljs-constant">Bcx</span>.configure <span class="hljs-keyword">do</span> |config|
-  config.account = <span class="hljs-string">'1234567890'</span>
-<span class="hljs-keyword">end</span>
-</code></pre>
+              
             </div>
             
             <div class="content"><div class='highlight'><pre><span class="hljs-class"><span class="hljs-keyword">module</span> <span class="hljs-title">Bcx</span></span>
-  <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Configuration</span></span>
-    <span class="hljs-keyword">attr_accessor</span> <span class="hljs-symbol">:account</span>, <span class="hljs-symbol">:api_version</span>
+  <span class="hljs-class"><span class="hljs-keyword">module</span> <span class="hljs-title">Launchpad</span></span>
+    <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">OAuth</span> <span class="hljs-inheritance">&lt; <span class="hljs-parent">Rapidash::Client</span></span></span>
+      method <span class="hljs-symbol">:oauth</span>
 
-    <span class="hljs-function"><span class="hljs-keyword">def</span> </span>initialize
-      <span class="hljs-variable">@api_version</span> = <span class="hljs-string">'v1'</span>
+      extension <span class="hljs-symbol">:json</span>
+      encode_request_with <span class="hljs-symbol">:json</span>
+
+      raise_errors
+
+      resource <span class="hljs-symbol">:authorization</span>, <span class="hljs-symbol">class_name:</span> <span class="hljs-string">"Bcx::Resources::Authorization"</span>
+
+      <span class="hljs-function"><span class="hljs-keyword">def</span> </span>initialize(options = {})
+        options[<span class="hljs-symbol">:site</span>]   ||= <span class="hljs-string">"https://launchpad.37signals.com"</span>
+        options[<span class="hljs-symbol">:uid</span>]    ||= options[<span class="hljs-symbol">:client_id</span>]
+        options[<span class="hljs-symbol">:secret</span>] ||= options[<span class="hljs-symbol">:client_secret</span>]
+
+        <span class="hljs-keyword">super</span>(options)
+      <span class="hljs-keyword">end</span>
     <span class="hljs-keyword">end</span>
   <span class="hljs-keyword">end</span>
 <span class="hljs-keyword">end</span></pre></div></div>

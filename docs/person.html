@@ -2,7 +2,7 @@
 
 <html>
 <head>
-  <title>configuration.rb</title>
+  <title>person.rb</title>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
   <link rel="stylesheet" media="all" href="docco.css" />
@@ -98,7 +98,7 @@
         
           <li id="title">
               <div class="annotation">
-                  <h1>configuration.rb</h1>
+                  <h1>person.rb</h1>
               </div>
           </li>
         
@@ -110,21 +110,31 @@
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-1">&#182;</a>
               </div>
-              <h2 id="configuration">Configuration</h2>
-<p>Provides a configuration block for setting up the Bcx client</p>
-<p>Example:</p>
-<pre><code><span class="hljs-constant">Bcx</span>.configure <span class="hljs-keyword">do</span> |config|
-  config.account = <span class="hljs-string">'1234567890'</span>
-<span class="hljs-keyword">end</span>
+              <h2 id="people">People</h2>
+<p>Provides access to people resource</p>
+<h4 id="get-all-people-on-the-account">Get all people on the account</h4>
+<p><code>GET /people.json</code></p>
+<pre><code>client.people!
+</code></pre><h4 id="get-a-person">Get a person</h4>
+<p><code>GET /people/123.json</code></p>
+<pre><code>client.people!(<span class="hljs-number">123</span>)
+</code></pre><h4 id="get-the-current-person">Get the current person</h4>
+<p><code>GET /people/me.json</code></p>
+<pre><code>client.people.me!
+</code></pre><h4 id="get-assigned-todos-for-a-person">Get assigned todos for a person</h4>
+<p><code>GET /people/1/assigned_todos.json</code></p>
+<pre><code>client.people(<span class="hljs-number">1</span>).assigned_todos
+</code></pre><h4 id="delete-a-person">Delete a person</h4>
+<p><code>DELETE /people/123.json</code></p>
+<pre><code>client.people(<span class="hljs-number">123</span>).delete!
 </code></pre>
             </div>
             
             <div class="content"><div class='highlight'><pre><span class="hljs-class"><span class="hljs-keyword">module</span> <span class="hljs-title">Bcx</span></span>
-  <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Configuration</span></span>
-    <span class="hljs-keyword">attr_accessor</span> <span class="hljs-symbol">:account</span>, <span class="hljs-symbol">:api_version</span>
-
-    <span class="hljs-function"><span class="hljs-keyword">def</span> </span>initialize
-      <span class="hljs-variable">@api_version</span> = <span class="hljs-string">'v1'</span>
+  <span class="hljs-class"><span class="hljs-keyword">module</span> <span class="hljs-title">Resources</span></span>
+    <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Person</span> <span class="hljs-inheritance">&lt; <span class="hljs-parent">Rapidash::Base</span></span></span>
+      url <span class="hljs-symbol">:people</span>
+      collection <span class="hljs-symbol">:me</span>
     <span class="hljs-keyword">end</span>
   <span class="hljs-keyword">end</span>
 <span class="hljs-keyword">end</span></pre></div></div>

@@ -2,7 +2,7 @@
 
 <html>
 <head>
-  <title>configuration.rb</title>
+  <title>todolist.rb</title>
   <meta http-equiv="content-type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
   <link rel="stylesheet" media="all" href="docco.css" />
@@ -98,7 +98,7 @@
         
           <li id="title">
               <div class="annotation">
-                  <h1>configuration.rb</h1>
+                  <h1>todolist.rb</h1>
               </div>
           </li>
         
@@ -110,21 +110,42 @@
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-1">&#182;</a>
               </div>
-              <h2 id="configuration">Configuration</h2>
-<p>Provides a configuration block for setting up the Bcx client</p>
-<p>Example:</p>
-<pre><code><span class="hljs-constant">Bcx</span>.configure <span class="hljs-keyword">do</span> |config|
-  config.account = <span class="hljs-string">'1234567890'</span>
-<span class="hljs-keyword">end</span>
+              <h2 id="todolists">Todolists</h2>
+<p>Provides access to todolist resoource both at the client level and per-project</p>
+<h4 id="get-all-todolists-for-a-project">Get all todolists for a project</h4>
+<p><code>GET /projects/123/todolists.json</code></p>
+<pre><code>client.projects(<span class="hljs-number">123</span>).todolists!
+</code></pre><h4 id="get-all-completed-todolists-for-a-project">Get all completed todolists for a project</h4>
+<p><code>GET /projects/1/todolists/completed.json</code></p>
+<pre><code>client.projects(<span class="hljs-number">123</span>).todolists.completed!
+</code></pre><h4 id="get-todolists-for-all-projects">Get todolists for all projects</h4>
+<p><code>GET /todolists.json</code></p>
+<pre><code>client.todolists!
+</code></pre><h4 id="get-completed-todolists-for-all-projects">Get completed todolists for all projects</h4>
+<p><code>GET /todolists/completed.json</code></p>
+<pre><code>client.todolists.completed!
+</code></pre><h4 id="get-specific-todolist-including-the-todos">Get specific todolist including the todos</h4>
+<p><code>GET /projects/123/todolists/456.json</code></p>
+<pre><code>client.projects(<span class="hljs-number">123</span>).todolists!(<span class="hljs-number">456</span>)
+</code></pre><h4 id="create-a-new-todolist">Create a new todolist</h4>
+<p><code>POST /projects/1/todolists.json</code></p>
+<pre><code>client.projects(<span class="hljs-number">123</span>).todolists.create!(<span class="hljs-symbol">name:</span> <span class="hljs-string">'My todolist'</span>, <span class="hljs-symbol">description:</span> <span class="hljs-string">'This is a todolist'</span>)
+</code></pre><h4 id="update-an-existing-todolist">Update an existing todolist</h4>
+<p><code>PUT /projects/123/todolists/456.json</code></p>
+<pre><code>client.projects(<span class="hljs-number">123</span>).todolists(<span class="hljs-number">456</span>).update!(<span class="hljs-symbol">name:</span> <span class="hljs-string">'Updated todolist'</span>)
+</code></pre><h4 id="delete-a-todolist">Delete a todolist</h4>
+<p><code>DELETE /projects/123/todolists/456.json</code></p>
+<pre><code>client.projects(<span class="hljs-number">123</span>).todolists(<span class="hljs-number">456</span>).delete!
 </code></pre>
             </div>
             
             <div class="content"><div class='highlight'><pre><span class="hljs-class"><span class="hljs-keyword">module</span> <span class="hljs-title">Bcx</span></span>
-  <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Configuration</span></span>
-    <span class="hljs-keyword">attr_accessor</span> <span class="hljs-symbol">:account</span>, <span class="hljs-symbol">:api_version</span>
+  <span class="hljs-class"><span class="hljs-keyword">module</span> <span class="hljs-title">Resources</span></span>
+    <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Todolist</span> <span class="hljs-inheritance">&lt; <span class="hljs-parent">Rapidash::Base</span></span></span>
+      resource <span class="hljs-symbol">:todos</span>, <span class="hljs-symbol">class_name:</span> <span class="hljs-string">'Bcx::Resources::Todo'</span>
+      resource <span class="hljs-symbol">:comments</span>
 
-    <span class="hljs-function"><span class="hljs-keyword">def</span> </span>initialize
-      <span class="hljs-variable">@api_version</span> = <span class="hljs-string">'v1'</span>
+      collection <span class="hljs-symbol">:completed</span>
     <span class="hljs-keyword">end</span>
   <span class="hljs-keyword">end</span>
 <span class="hljs-keyword">end</span></pre></div></div>
