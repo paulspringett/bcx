@@ -46,6 +46,7 @@ module Bcx
   module Resources
     class Todolist < Rapidash::Base
       resource :todos, class_name: 'Bcx::Resources::Todo'
+      resource :comments
 
       collection :completed
     end
