@@ -1,6 +1,6 @@
 ## Bcx
 
-> NB. This gem is missing a lot of the Basecamp endpoints. Please feel free [to contribute!](#contributing)
+> NB. This gem has a lot of the main Basecamp endpoints. Please add others by [contributing!](#contributing)
 
 Fully-fledged Ruby API wrapper for Basecamp Next
 
