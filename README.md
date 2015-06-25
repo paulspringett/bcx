@@ -98,7 +98,7 @@ The following resources are fully implemented and tested.
 * [Todos](http://paulspringett.github.io/bcx/docs/todo.html)
 * [Accesses](http://paulspringett.github.io/bcx/docs/access.html)
 * [Authorization](http://paulspringett.github.io/bcx/docs/authorization.html) (Launchpad API)
-
+* [Comments](http://paulspringett.github.io/bcx/docs/comment.html) (attachments not supported)
 
 #### Bang operators
 
@@ -158,7 +158,7 @@ $ rake docs:generate
 
 The endpoints listed under [Resources](https://github.com/paulspringett/bcx#resources) above are implemented and tested.
 
-All other endpoints still need implementing, see the official
+All other endpoints need implementing, see the official
 [Basecamp Next API docs](https://github.com/37signals/bcx-api) for details on what to implement.
 
 ### How to contribute
