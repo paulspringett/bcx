@@ -40,6 +40,7 @@ Configure Bcx for your Basecamp account
 ```ruby
 Bcx.configure do |config|
   config.account = '1234567890'
+  config.api_version = 'v1' #new (as opposed to Classic) Basecamp API version to connect to
 end
 ```
 
