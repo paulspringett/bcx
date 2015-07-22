@@ -29,12 +29,17 @@ module Bcx
   end
 
   class << self
-    attr_accessor :configuration
+    attr_writer :configuration
+  end
+
+  # Create configuration block in case the user does not call configure
+  def self.configuration
+    self.class.instance_variable_set('@configuration',Configuration.new) if self.class.instance_variable_get('@configuration').nil?
+    self.class.instance_variable_get('@configuration')
   end
 
   # Expose configuration block
   def self.configure
-    self.configuration ||= Configuration.new
     yield(configuration)
   end
 end
