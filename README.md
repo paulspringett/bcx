@@ -35,11 +35,12 @@ $ bundle install
 
 ### Usage
 
-Configure Bcx for your Basecamp account
+Configure Bcx for your Basecamp account. Basecamp requests that you provide contact information for your app through the user_agent string, for eventual technical issues.
 
 ```ruby
 Bcx.configure do |config|
   config.account = '1234567890'
+  config.user_agent = 'My great app name. https://app.com/contact_us.rb, contact: me@me.com'
 end
 ```
 
@@ -82,7 +83,7 @@ client = Bcx::Client::OAuth.new(client_id: '1234567890', client_secret: '831994c
 
 You can get a `client_id` and `client_secret` from https://integrate.37signals.com/
 
-You can also pass an `:account` option to the OAuth client (allowing multiple clients in your app).
+You can also pass an `:account` option to the OAuth client (allowing multiple clients in your app), in which case do you not need to specify an account in the config block.
 
 ```ruby
 client = Bcx::Client::OAuth.new(account: 99999999, ...)

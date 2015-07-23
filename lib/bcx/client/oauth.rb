@@ -23,10 +23,17 @@ module Bcx
       def initialize(options = {})
         @account = options[:account] || Bcx.configuration.account
         @api_version = Bcx.configuration.api_version
+        @user_agent = options[:user_agent] || Bcx.configuration.user_agent
 
         options[:site] = "https://basecamp.com/#{@account}/api/#{@api_version}"
         options[:uid] ||= options[:client_id]
         options[:secret] ||= options[:client_secret]
+
+        if @user_agent
+          options[:request_default_options] ||= {}
+          options[:request_default_options][:header] ||= {}
+          options[:request_default_options][:header][:user_agent] ||= @user_agent
+        end
 
         super(options)
       end

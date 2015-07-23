@@ -10,7 +10,7 @@
 #
 module Bcx
   class Configuration
-    attr_accessor :account, :api_version
+    attr_accessor :account, :api_version, :user_agent
 
     def initialize
       @api_version = 'v1'
