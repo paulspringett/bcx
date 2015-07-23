@@ -19,7 +19,7 @@ describe Bcx::Resources::Access, :vcr do
     it "should grant access" do
       client.projects(2951531).accesses.create!(email_addresses: ["hopper.derek@gmail.com"])
       accesses = client.projects(2951531).accesses!
-      accesses.detect { |access| access.id == 4996562 }.should be_present
+      expect(accesses.detect { |access| access.id == 4996562 }).to be_present
     end
   end
 
@@ -27,7 +27,7 @@ describe Bcx::Resources::Access, :vcr do
     it "should revoke access" do
       client.projects(2951531).accesses(4996562).delete!
       accesses = client.projects(2951531).accesses!
-      accesses.detect { |access| access.id == 4996562 }.should_not be_present
+      expect(accesses.detect { |access| access.id == 4996562 }).not_to be_present
     end
   end
 end

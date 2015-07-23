@@ -17,5 +17,4 @@ RSpec.configure do |config|
     Bcx.configure { |config| config.account = '2274488' }
   end
 
-  config.treat_symbols_as_metadata_keys_with_true_values = true
 end
