@@ -27,7 +27,11 @@ module Bcx
       messages = []
 
       body.each_pair do |attribute, msgs|
-        msgs.each { |msg| messages.push "#{attribute} #{msg}" }
+        if msgs.respond_to? :each
+          msgs.each { |msg| messages.push "#{attribute} #{msg}" }
+        else
+          messages.push "#{attribute} #{msgs.to_s}"
+        end
       end
 
       messages.join(', ')

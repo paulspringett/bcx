@@ -33,13 +33,20 @@ describe Bcx::Client do
 
   describe "error handling", :vcr do
     let(:client) { Bcx::Client::HTTP.new(login: 'bcx-test-user', password: 'secret') }
-
-    it "should raise exception" do
+    it "should raise exception_with_array_error" do
       expect { client.projects.create!(name: '') }.to raise_error { |response|
         expect(response).to be_a Bcx::ResponseError
         expect(response.status).to eq 422
         expect(response.errors).to include("name can't be blank")
       }
+    end
+
+    it "should raise exception_with_string_error" do
+      expect { client.projects.create!(name: '') }.to raise_error { |response|
+                                                        expect(response).to be_a Bcx::ResponseError
+                                                        expect(response.status).to eq 422
+                                                        expect(response.errors).to include("name can't be blank")
+                                                      }
     end
   end
 end
