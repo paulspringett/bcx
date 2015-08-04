@@ -50,7 +50,7 @@ http_interactions:
       - '0.145644'
     body:
       encoding: US-ASCII
-      string: ! '{"name":["can''t be blank"]}'
+      string: ! '{"name":["can''t be blank","can''t be duplicate"]}'
     http_version: 
   recorded_at: Fri, 21 Jun 2013 21:32:47 GMT
 recorded_with: VCR 2.5.0
