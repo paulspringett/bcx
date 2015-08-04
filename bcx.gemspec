@@ -16,7 +16,7 @@ Gem::Specification.new do |gem|
   gem.version       = Bcx::VERSION
   gem.license       = 'MIT'
 
-  gem.add_runtime_dependency 'rapidash', '~> 0.3.0'
+  gem.add_runtime_dependency 'rapidash', '~> 0.4.0'
 
   gem.add_development_dependency 'rake'
   gem.add_development_dependency 'rspec'
