@@ -24,8 +24,9 @@ module Bcx
         @account = options[:account] || Bcx.configuration.account
         @api_version = Bcx.configuration.api_version
         @user_agent = options[:user_agent] || Bcx.configuration.user_agent
+        base_url = options[:base_url] || 'https://basecamp.com'
 
-        options[:site] = "https://basecamp.com/#{@account}/api/#{@api_version}"
+        options[:site] = "#{base_url}/#{@account}/api/#{@api_version}"
         options[:uid] ||= options[:client_id]
         options[:secret] ||= options[:client_secret]
 
