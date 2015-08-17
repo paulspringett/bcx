@@ -39,19 +39,21 @@
 # See the [New Basecamp API docs](https://github.com/basecamp/bcx-api/blob/master/sections/calendar_events.md#create-calendar-event) for more detailed exmaples.
 #
 # #### Update an existing calendar event for a given project
-# `PUT /projects/123.json`
+# `PUT /projects/123/calendar_events/456.json`
 #
-#     client.projects(123).update!(description: 'A new description')
+#     client.projects(123).calendar_events(456).update!(options)
 #
-# #### Delete a project
-# `DELETE /projects/123.json`
+# #### Delete a calendar event
+# `DELETE /projects/123/calendar_events/456.json`
 #
-#     client.projects(123).delete!
+#     client.projects(123).calendar_events(456).delete!
 #
 module Bcx
   module Resources
     class CalendarEvent < Rapidash::Base
       url :calendar_events
+
+      collection :past
     end
   end
 end
