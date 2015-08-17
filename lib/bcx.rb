@@ -17,6 +17,7 @@ module Bcx
     autoload :Access, 'bcx/resources/access'
     autoload :Authorization, 'bcx/resources/authorization'
     autoload :Comment, 'bcx/resources/comment'
+    autoload :CalendarEvent, 'bcx/resources/calendar_event'
   end
 
   module Client
