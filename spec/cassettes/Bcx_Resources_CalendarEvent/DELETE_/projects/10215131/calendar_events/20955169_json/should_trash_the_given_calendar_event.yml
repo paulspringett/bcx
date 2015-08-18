@@ -1,0 +1,116 @@
+---
+http_interactions:
+- request:
+    method: delete
+    uri: https://bcx-test-user%40mailinator.com:supersecret@basecamp.com/3015337/api/v1/projects/10215131/calendar_events/20955169.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 204
+      message: No Content
+    headers:
+      Server:
+      - openresty
+      Date:
+      - Mon, 17 Aug 2015 23:42:05 GMT
+      Connection:
+      - keep-alive
+      Status:
+      - 204 No Content
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Asset-Paths:
+      - '{"desktop.js":"desktop-9cfb91b604fe3167db6bb04491169ac6.js","desktop.css":"desktop-d7e97abbc9c3540e9ab5d7537c0b4a05.css"}'
+      Cache-Control:
+      - no-cache
+      X-Request-Id:
+      - 9e6d84ab-148f-4261-b793-f719250cbf2c
+      X-Runtime:
+      - '0.179311'
+      Access-Control-Expose-Headers:
+      - X-Request-Id, X-Runtime, X-Request-Path, Content-Length
+      X-Queue-Time:
+      - '0.0015606880187988281'
+      Timing-Allow-Origin:
+      - "*"
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Mon, 17 Aug 2015 23:40:55 GMT
+- request:
+    method: get
+    uri: https://bcx-test-user%40mailinator.com:supersecret@basecamp.com/3015337/api/v1/projects/10215131/calendar_events/20955169.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - openresty
+      Date:
+      - Mon, 17 Aug 2015 23:42:06 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - Keep-Alive
+      Status:
+      - 200 OK
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Asset-Paths:
+      - '{"desktop.js":"desktop-9cfb91b604fe3167db6bb04491169ac6.js","desktop.css":"desktop-d7e97abbc9c3540e9ab5d7537c0b4a05.css"}'
+      Etag:
+      - '"e28f0521d1712dc843b384fb928b00e7"'
+      Last-Modified:
+      - Mon, 17 Aug 2015 23:42:05 GMT
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - f2ab2440-3d8f-4821-833d-1df1a4fb808a
+      X-Runtime:
+      - '0.134914'
+      Access-Control-Expose-Headers:
+      - X-Request-Id, X-Runtime, X-Request-Path, Content-Length
+      X-Queue-Time:
+      - '0.0008075237274169922'
+      Timing-Allow-Origin:
+      - "*"
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '449'
+    body:
+      encoding: UTF-8
+      string: '{"id":20955169,"created_at":"2015-08-17T16:41:11.000-07:00","updated_at":"2015-08-17T16:42:05.000-07:00","summary":"My
+        updated calendar event","description":null,"private":false,"trashed":true,"all_day":true,"starts_at":"2015-08-17","ends_at":"2015-08-17","url":"https://basecamp.com/3015337/api/v1/projects/10215131/calendar_events/20955169.json","app_url":"https://basecamp.com/3015337/projects/10215131/calendar_events/20955169","creator":{"id":12199666,"name":"bcx-test-user","avatar_url":"http://cdn.37img.com/builtin/default_avatar_v1_6/avatar.gif?r=3","fullsize_avatar_url":"https://cdn.37img.com/builtin/default_avatar_v1_6/original.gif?r=3"},"comments":[],"subscribers":[]}'
+    http_version: 
+  recorded_at: Mon, 17 Aug 2015 23:40:56 GMT
+recorded_with: VCR 2.9.3
