@@ -52,6 +52,7 @@ module Bcx
   module Resources
     class CalendarEvent < Rapidash::Base
       url :calendar_events
+      resource :comments
 
       collection :past
     end

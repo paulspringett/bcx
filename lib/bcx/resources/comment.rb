@@ -12,6 +12,10 @@
 #
 #     client.projects(123).todos(456).comments.create!(content: 'New comment')
 #
+# #### Create a new calendar event comment
+# `POST /projects/123/calendar_events/456/comments.json`
+#
+#     client.projects(123).calendar_events(456).comments.create!(content: 'New comment')
 #
 # #### Delete the comment
 # `DELETE /projects/123/comments/456.json`

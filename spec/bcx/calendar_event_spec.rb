@@ -28,15 +28,23 @@ describe Bcx::Resources::CalendarEvent, :vcr do
     end
   end
 
-  describe "GET /projects/10215131/calendar_events/20955169.json" do
-    let(:calendar_event) { client.projects(10215131).calendar_events!(20955169) }
+  describe "POST /projects/10215131/calendar_events.json" do
+    it "should create a new comment for a calendar event" do
+      comment = client.projects(10215131).calendar_events(21015316).comments.create!(content: "WOW!")
+        expect(comment.created_at).not_to be_blank
+        expect(comment.content).to eq 'WOW!'
+    end
+  end
+
+  describe "GET /projects/10215131/calendar_events/21015316.json" do
+    let(:calendar_event) { client.projects(10215131).calendar_events!(21015316) }
 
     it "should return a hash" do
         expect(calendar_event).to be_a Hashie::Mash
     end
 
     it "should have the correct id" do
-        expect(calendar_event.id).to eq 20955169
+        expect(calendar_event.id).to eq 21015316
         expect(calendar_event.summary).to eq 'My calendar event'
     end
   end
@@ -53,17 +61,17 @@ describe Bcx::Resources::CalendarEvent, :vcr do
     end
   end
 
-  describe "PUT /projects/10215131/calendar_events/20955169.json" do
+  describe "PUT /projects/10215131/calendar_events/21015316.json" do
     it "should update an existing calendar event" do
-      calendar_event = client.projects(10215131).calendar_events(20955169).update!(summary: 'My updated calendar event')
+      calendar_event = client.projects(10215131).calendar_events(21015316).update!(summary: 'My updated calendar event')
       expect(calendar_event.summary).to eq 'My updated calendar event'
     end
   end
 
-  describe "DELETE /projects/10215131/calendar_events/20955169.json" do
+  describe "DELETE /projects/10215131/calendar_events/21015316.json" do
     it "should trash the given calendar event" do
-      client.projects(10215131).calendar_events(20955169).delete!
-      calendar_event = client.projects(10215131).calendar_events!(20955169)
+      client.projects(10215131).calendar_events(21015316).delete!
+      calendar_event = client.projects(10215131).calendar_events!(21015316)
       expect(calendar_event.trashed).to be true
     end
   end

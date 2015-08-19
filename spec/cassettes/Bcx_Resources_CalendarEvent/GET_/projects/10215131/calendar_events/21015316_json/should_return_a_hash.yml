@@ -1,0 +1,65 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://bcx-test-user%40mailinator.com:supersecret@basecamp.com/3015337/api/v1/projects/10215131/calendar_events/21015316.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - openresty
+      Date:
+      - Wed, 19 Aug 2015 23:41:34 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - Keep-Alive
+      Status:
+      - 200 OK
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Asset-Paths:
+      - '{"desktop.js":"desktop-9cfb91b604fe3167db6bb04491169ac6.js","desktop.css":"desktop-d7e97abbc9c3540e9ab5d7537c0b4a05.css"}'
+      Etag:
+      - '"430369def4b1a0b4fa3bd07f90051ed5"'
+      Last-Modified:
+      - Wed, 19 Aug 2015 23:41:34 GMT
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 2432ac4a-9dbe-4541-80bf-4e398991f8c3
+      X-Runtime:
+      - '0.141749'
+      Access-Control-Expose-Headers:
+      - X-Request-Id, X-Runtime, X-Request-Path, Content-Length
+      X-Queue-Time:
+      - '0.0011372566223144531'
+      Timing-Allow-Origin:
+      - "*"
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '525'
+    body:
+      encoding: UTF-8
+      string: '{"id":21015316,"created_at":"2015-08-19T16:40:41.000-07:00","updated_at":"2015-08-19T16:41:34.000-07:00","summary":"My
+        calendar event","description":null,"private":false,"trashed":false,"all_day":true,"starts_at":"2015-08-19","ends_at":"2015-08-19","url":"https://basecamp.com/3015337/api/v1/projects/10215131/calendar_events/21015316.json","app_url":"https://basecamp.com/3015337/projects/10215131/calendar_events/21015316","creator":{"id":12199666,"name":"bcx-test-user","avatar_url":"http://cdn.37img.com/builtin/default_avatar_v1_6/avatar.gif?r=3","fullsize_avatar_url":"https://cdn.37img.com/builtin/default_avatar_v1_6/original.gif?r=3"},"comments":[{"id":320215910,"content":"WOW!","created_at":"2015-08-19T16:41:34.000-07:00","updated_at":"2015-08-19T16:41:34.000-07:00","private":false,"trashed":false,"attachments":[],"creator":{"id":12199666,"name":"bcx-test-user","avatar_url":"http://cdn.37img.com/builtin/default_avatar_v1_6/avatar.gif?r=3","fullsize_avatar_url":"https://cdn.37img.com/builtin/default_avatar_v1_6/original.gif?r=3"}}],"subscribers":[{"id":12199666,"name":"bcx-test-user"}]}'
+    http_version: 
+  recorded_at: Wed, 19 Aug 2015 23:41:34 GMT
+recorded_with: VCR 2.9.3

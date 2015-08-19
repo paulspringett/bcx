@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - openresty
       Date:
-      - Mon, 17 Aug 2015 23:42:03 GMT
+      - Wed, 19 Aug 2015 23:42:50 GMT
       Content-Type:
       - application/json; charset=utf-8
       Connection:
@@ -41,13 +41,13 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 61579b5a-9238-4888-b0bc-8962356ca363
+      - b73062a6-183b-4e84-8c59-474f938a466d
       X-Runtime:
-      - '0.129202'
+      - '0.121204'
       Access-Control-Expose-Headers:
       - X-Request-Id, X-Runtime, X-Request-Path, Content-Length
       X-Queue-Time:
-      - '0.0006086826324462891'
+      - '0.0010597705841064453'
       Timing-Allow-Origin:
       - "*"
       Vary:
@@ -58,5 +58,5 @@ http_interactions:
       encoding: UTF-8
       string: "[]"
     http_version: 
-  recorded_at: Mon, 17 Aug 2015 23:40:54 GMT
+  recorded_at: Wed, 19 Aug 2015 23:42:50 GMT
 recorded_with: VCR 2.9.3

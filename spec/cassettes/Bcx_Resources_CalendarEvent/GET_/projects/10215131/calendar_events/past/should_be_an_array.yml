@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - openresty
       Date:
-      - Mon, 17 Aug 2015 23:42:02 GMT
+      - Wed, 19 Aug 2015 23:41:35 GMT
       Content-Type:
       - application/json; charset=utf-8
       Connection:
@@ -37,26 +37,29 @@ http_interactions:
       X-Asset-Paths:
       - '{"desktop.js":"desktop-9cfb91b604fe3167db6bb04491169ac6.js","desktop.css":"desktop-d7e97abbc9c3540e9ab5d7537c0b4a05.css"}'
       Etag:
-      - '"d751713988987e9331980363e24189ce"'
+      - '"784715ffd8b2ee30b40dd75cb8f82e40"'
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 60429325-c13e-4b42-97f3-bc07efce4ebd
+      - 62a0edb0-702e-4f25-8a80-e95f472b8876
       X-Runtime:
-      - '0.119537'
+      - '0.132094'
       Access-Control-Expose-Headers:
       - X-Request-Id, X-Runtime, X-Request-Path, Content-Length
       X-Queue-Time:
-      - '0.0009055137634277344'
+      - '0.0012137889862060547'
       Timing-Allow-Origin:
       - "*"
       Vary:
       - Accept-Encoding
       Content-Length:
-      - '26'
+      - '674'
     body:
       encoding: UTF-8
-      string: "[]"
+      string: '[{"id":21014392,"created_at":"2015-08-19T15:49:21.000-07:00","updated_at":"2015-08-19T15:49:21.000-07:00","summary":"
+        course @ location","description":" address ","private":false,"trashed":false,"all_day":false,"starts_at":"2015-08-08T17:30:47.000-07:00","ends_at":"2015-08-08T17:30:47.000-07:00","url":"https://basecamp.com/3015337/api/v1/projects/10215131/calendar_events/21014392.json","app_url":"https://basecamp.com/3015337/projects/10215131/calendar_events/21014392","creator":{"id":12199666,"name":"bcx-test-user","avatar_url":"http://cdn.37img.com/builtin/default_avatar_v1_6/avatar.gif?r=3","fullsize_avatar_url":"https://cdn.37img.com/builtin/default_avatar_v1_6/original.gif?r=3"},"comments_count":0},{"id":21014204,"created_at":"2015-08-19T15:36:09.000-07:00","updated_at":"2015-08-19T15:36:09.000-07:00","summary":"
+        course @ location","description":" address ","private":false,"trashed":false,"all_day":false,"starts_at":"2015-08-08T17:30:47.000-07:00","ends_at":"2015-08-08T17:30:47.000-07:00","url":"https://basecamp.com/3015337/api/v1/projects/10215131/calendar_events/21014204.json","app_url":"https://basecamp.com/3015337/projects/10215131/calendar_events/21014204","creator":{"id":12199666,"name":"bcx-test-user","avatar_url":"http://cdn.37img.com/builtin/default_avatar_v1_6/avatar.gif?r=3","fullsize_avatar_url":"https://cdn.37img.com/builtin/default_avatar_v1_6/original.gif?r=3"},"comments_count":0},{"id":21014212,"created_at":"2015-08-19T15:36:32.000-07:00","updated_at":"2015-08-19T15:36:32.000-07:00","summary":"
+        course @ location","description":" address ","private":false,"trashed":false,"all_day":false,"starts_at":"2015-08-08T17:30:47.000-07:00","ends_at":"2015-08-08T17:30:47.000-07:00","url":"https://basecamp.com/3015337/api/v1/projects/10215131/calendar_events/21014212.json","app_url":"https://basecamp.com/3015337/projects/10215131/calendar_events/21014212","creator":{"id":12199666,"name":"bcx-test-user","avatar_url":"http://cdn.37img.com/builtin/default_avatar_v1_6/avatar.gif?r=3","fullsize_avatar_url":"https://cdn.37img.com/builtin/default_avatar_v1_6/original.gif?r=3"},"comments_count":0}]'
     http_version: 
-  recorded_at: Mon, 17 Aug 2015 23:40:53 GMT
+  recorded_at: Wed, 19 Aug 2015 23:41:35 GMT
 recorded_with: VCR 2.9.3
