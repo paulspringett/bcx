@@ -1,0 +1,64 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://bcx-test-user%40mailinator.com:supersecret@basecamp.com/3015337/api/v1/projects/10215131/calendar_events/21015316/comments.json
+    body:
+      encoding: UTF-8
+      string: '{"content":"WOW!"}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      Server:
+      - openresty
+      Date:
+      - Wed, 19 Aug 2015 23:41:34 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - Keep-Alive
+      Status:
+      - 201 Created
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Asset-Paths:
+      - '{"desktop.js":"desktop-9cfb91b604fe3167db6bb04491169ac6.js","desktop.css":"desktop-d7e97abbc9c3540e9ab5d7537c0b4a05.css"}'
+      Etag:
+      - '"e01d098a89454a09d378f46c94506da9"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 4ac2680d-3182-4343-811a-b313288f31f1
+      X-Runtime:
+      - '0.202857'
+      Access-Control-Expose-Headers:
+      - X-Request-Id, X-Runtime, X-Request-Path, Content-Length
+      X-Queue-Time:
+      - '0.0013377666473388672'
+      Timing-Allow-Origin:
+      - "*"
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '379'
+    body:
+      encoding: UTF-8
+      string: '{"id":320215910,"content":"WOW!","created_at":"2015-08-19T16:41:34.176-07:00","updated_at":"2015-08-19T16:41:34.176-07:00","private":false,"trashed":false,"attachments":[],"creator":{"id":12199666,"name":"bcx-test-user","avatar_url":"http://cdn.37img.com/builtin/default_avatar_v1_6/avatar.gif?r=3","fullsize_avatar_url":"https://cdn.37img.com/builtin/default_avatar_v1_6/original.gif?r=3"},"topic_url":"https://basecamp.com/3015337/api/v1/projects/10215131/calendar_events/21015316.json","topic_app_url":"https://basecamp.com/3015337/projects/10215131/calendar_events/21015316"}'
+    http_version: 
+  recorded_at: Wed, 19 Aug 2015 23:41:33 GMT
+recorded_with: VCR 2.9.3

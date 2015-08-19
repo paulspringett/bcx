@@ -1,0 +1,62 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://bcx-test-user%40mailinator.com:supersecret@basecamp.com/3015337/api/v1/projects/10215131/calendar_events/past.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - openresty
+      Date:
+      - Wed, 19 Aug 2015 23:42:50 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Connection:
+      - Keep-Alive
+      Status:
+      - 200 OK
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Asset-Paths:
+      - '{"desktop.js":"desktop-9cfb91b604fe3167db6bb04491169ac6.js","desktop.css":"desktop-d7e97abbc9c3540e9ab5d7537c0b4a05.css"}'
+      Etag:
+      - '"d751713988987e9331980363e24189ce"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - b73062a6-183b-4e84-8c59-474f938a466d
+      X-Runtime:
+      - '0.121204'
+      Access-Control-Expose-Headers:
+      - X-Request-Id, X-Runtime, X-Request-Path, Content-Length
+      X-Queue-Time:
+      - '0.0010597705841064453'
+      Timing-Allow-Origin:
+      - "*"
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '26'
+    body:
+      encoding: UTF-8
+      string: "[]"
+    http_version: 
+  recorded_at: Wed, 19 Aug 2015 23:42:50 GMT
+recorded_with: VCR 2.9.3

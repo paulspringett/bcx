@@ -39,6 +39,7 @@ module Bcx
       resource :todos
       resource :accesses
       resource :comments
+      resource :calendar_events
 
       collection :archived
     end
