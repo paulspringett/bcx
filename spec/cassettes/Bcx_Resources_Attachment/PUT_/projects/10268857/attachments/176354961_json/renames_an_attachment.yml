@@ -1,0 +1,182 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://basecamp.com/2274488/api/v1/projects/10268857/attachments/176354961.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Authorization:
+      - Basic YmFzZWNhbXB0ZXN0ZXIxMjNAZ21haWwuY29tOlRndkdvR1BGc0JLek5uYTltZnFSdUM3cEttdXBlR3FadHJpQnBYZENGcQ==
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      server:
+      - openresty
+      date:
+      - Sat, 22 Aug 2015 20:46:46 GMT
+      content-type:
+      - application/json; charset=utf-8
+      connection:
+      - Keep-Alive
+      status:
+      - 200 OK
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+      x-content-type-options:
+      - nosniff
+      x-asset-paths:
+      - '{"desktop.js":"desktop-9cfb91b604fe3167db6bb04491169ac6.js","desktop.css":"desktop-d7e97abbc9c3540e9ab5d7537c0b4a05.css"}'
+      etag:
+      - '"dd55900442430db77ea306f947ebbf64"'
+      last-modified:
+      - Sat, 22 Aug 2015 20:46:21 GMT
+      cache-control:
+      - max-age=0, private, must-revalidate
+      x-request-id:
+      - 6cfc32b3-365a-4e87-826a-e6fd278224b5
+      x-runtime:
+      - '0.127984'
+      access-control-expose-headers:
+      - X-Request-Id, X-Runtime, X-Request-Path, Content-Length
+      x-queue-time:
+      - '0.001153707504272461'
+      timing-allow-origin:
+      - "*"
+      vary:
+      - Accept-Encoding
+      content-length:
+      - '549'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":176354961,"name":"bigbasecamplogo.png","byte_size":23704,"content_type":"image/png","created_at":"2015-08-22T09:52:43.000-04:00","updated_at":"2015-08-22T16:46:21.000-04:00","private":false,"trashed":false,"key":"6558c7c1dfdb9423be143752f67069c00010","url":"https://asset1.basecamp.com/3020319/api/v1/projects/10268857/attachments/176354961/6558c7c1dfdb9423be143752f67069c00010/original/bigbasecamplogo.png","app_url":"https://asset1.basecamp.com/3020319/projects/10268857/attachments/176354961/6558c7c1dfdb9423be143752f67069c00010/original/bigbasecamplogo.png","thumbnail_url":"https://asset1.basecamp.com/3020319/projects/10268857/attachments/176354961/6558c7c1dfdb9423be143752f67069c00010/thumbnail.png","tags":[],"creator":{"id":12248265,"name":"Basecamp","avatar_url":"http://cdn.37img.com/global/56932044f64da36d76aae07d082859c30010/avatar.gif?r=3","fullsize_avatar_url":"https://cdn.37img.com/global/56932044f64da36d76aae07d082859c30010/original.gif?r=3"},"attachable":{"id":46931084,"type":"Message","url":"https://basecamp.com/3020319/api/v1/projects/10268857/messages/46931084.json","app_url":"https://basecamp.com/3020319/projects/10268857/messages/46931084"}}'
+    http_version: 
+  recorded_at: Sat, 22 Aug 2015 20:46:48 GMT
+- request:
+    method: put
+    uri: https://basecamp.com/2274488/api/v1/projects/10268857/attachments/176354961.json
+    body:
+      encoding: UTF-8
+      string: '{"name":"smallbasecamplogo.png"}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Authorization:
+      - Basic YmFzZWNhbXB0ZXN0ZXIxMjNAZ21haWwuY29tOlRndkdvR1BGc0JLek5uYTltZnFSdUM3cEttdXBlR3FadHJpQnBYZENGcQ==
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      server:
+      - openresty
+      date:
+      - Sat, 22 Aug 2015 20:46:46 GMT
+      content-type:
+      - application/json; charset=utf-8
+      connection:
+      - Keep-Alive
+      status:
+      - 200 OK
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+      x-content-type-options:
+      - nosniff
+      x-asset-paths:
+      - '{"desktop.js":"desktop-9cfb91b604fe3167db6bb04491169ac6.js","desktop.css":"desktop-d7e97abbc9c3540e9ab5d7537c0b4a05.css"}'
+      etag:
+      - '"4d5668e121e43eac6f215e7fbcead5cd"'
+      cache-control:
+      - max-age=0, private, must-revalidate
+      x-request-id:
+      - 372baf5a-a61f-41f3-9a05-bfe41edf57f2
+      x-runtime:
+      - '0.196041'
+      access-control-expose-headers:
+      - X-Request-Id, X-Runtime, X-Request-Path, Content-Length
+      x-queue-time:
+      - '0.0006260871887207031'
+      timing-allow-origin:
+      - "*"
+      vary:
+      - Accept-Encoding
+      content-length:
+      - '555'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":176354961,"name":"smallbasecamplogo.png","byte_size":23704,"content_type":"image/png","created_at":"2015-08-22T09:52:43.000-04:00","updated_at":"2015-08-22T16:46:46.519-04:00","private":false,"trashed":false,"key":"6558c7c1dfdb9423be143752f67069c00010","url":"https://asset1.basecamp.com/3020319/api/v1/projects/10268857/attachments/176354961/6558c7c1dfdb9423be143752f67069c00010/original/smallbasecamplogo.png","app_url":"https://asset1.basecamp.com/3020319/projects/10268857/attachments/176354961/6558c7c1dfdb9423be143752f67069c00010/original/smallbasecamplogo.png","thumbnail_url":"https://asset1.basecamp.com/3020319/projects/10268857/attachments/176354961/6558c7c1dfdb9423be143752f67069c00010/thumbnail.png","tags":[],"creator":{"id":12248265,"name":"Basecamp","avatar_url":"http://cdn.37img.com/global/56932044f64da36d76aae07d082859c30010/avatar.gif?r=3","fullsize_avatar_url":"https://cdn.37img.com/global/56932044f64da36d76aae07d082859c30010/original.gif?r=3"},"attachable":{"id":46931084,"type":"Message","url":"https://basecamp.com/3020319/api/v1/projects/10268857/messages/46931084.json","app_url":"https://basecamp.com/3020319/projects/10268857/messages/46931084"}}'
+    http_version: 
+  recorded_at: Sat, 22 Aug 2015 20:46:48 GMT
+- request:
+    method: get
+    uri: https://basecamp.com/2274488/api/v1/projects/10268857/attachments/176354961.json
+    body:
+      encoding: UTF-8
+      string: '{"name":"smallbasecamplogo.png"}'
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Authorization:
+      - Basic YmFzZWNhbXB0ZXN0ZXIxMjNAZ21haWwuY29tOlRndkdvR1BGc0JLek5uYTltZnFSdUM3cEttdXBlR3FadHJpQnBYZENGcQ==
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      server:
+      - openresty
+      date:
+      - Sat, 22 Aug 2015 20:46:47 GMT
+      content-type:
+      - application/json; charset=utf-8
+      connection:
+      - Keep-Alive
+      status:
+      - 200 OK
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+      x-content-type-options:
+      - nosniff
+      x-asset-paths:
+      - '{"desktop.js":"desktop-9cfb91b604fe3167db6bb04491169ac6.js","desktop.css":"desktop-d7e97abbc9c3540e9ab5d7537c0b4a05.css"}'
+      etag:
+      - '"5c81c0d1d001fa2c73e0ed23c4acfd5d"'
+      last-modified:
+      - Sat, 22 Aug 2015 20:46:46 GMT
+      cache-control:
+      - max-age=0, private, must-revalidate
+      x-request-id:
+      - c8a91053-5715-404d-9a35-0442c2f16955
+      x-runtime:
+      - '0.126781'
+      access-control-expose-headers:
+      - X-Request-Id, X-Runtime, X-Request-Path, Content-Length
+      x-queue-time:
+      - '0.0012085437774658203'
+      timing-allow-origin:
+      - "*"
+      vary:
+      - Accept-Encoding
+      content-length:
+      - '551'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":176354961,"name":"smallbasecamplogo.png","byte_size":23704,"content_type":"image/png","created_at":"2015-08-22T09:52:43.000-04:00","updated_at":"2015-08-22T16:46:46.000-04:00","private":false,"trashed":false,"key":"6558c7c1dfdb9423be143752f67069c00010","url":"https://asset1.basecamp.com/3020319/api/v1/projects/10268857/attachments/176354961/6558c7c1dfdb9423be143752f67069c00010/original/smallbasecamplogo.png","app_url":"https://asset1.basecamp.com/3020319/projects/10268857/attachments/176354961/6558c7c1dfdb9423be143752f67069c00010/original/smallbasecamplogo.png","thumbnail_url":"https://asset1.basecamp.com/3020319/projects/10268857/attachments/176354961/6558c7c1dfdb9423be143752f67069c00010/thumbnail.png","tags":[],"creator":{"id":12248265,"name":"Basecamp","avatar_url":"http://cdn.37img.com/global/56932044f64da36d76aae07d082859c30010/avatar.gif?r=3","fullsize_avatar_url":"https://cdn.37img.com/global/56932044f64da36d76aae07d082859c30010/original.gif?r=3"},"attachable":{"id":46931084,"type":"Message","url":"https://basecamp.com/3020319/api/v1/projects/10268857/messages/46931084.json","app_url":"https://basecamp.com/3020319/projects/10268857/messages/46931084"}}'
+    http_version: 
+  recorded_at: Sat, 22 Aug 2015 20:46:49 GMT
+recorded_with: VCR 2.9.3
