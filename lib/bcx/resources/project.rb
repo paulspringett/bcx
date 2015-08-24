@@ -39,6 +39,7 @@ module Bcx
       resource :todos
       resource :accesses
       resource :comments
+      resource :attachments
 
       collection :archived
     end

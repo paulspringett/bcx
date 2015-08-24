@@ -1,0 +1,112 @@
+---
+http_interactions:
+- request:
+    method: delete
+    uri: https://basecamp.com/2274488/api/v1/projects/10268857/attachments/176355933.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Authorization:
+      - Basic YmFzZWNhbXB0ZXN0ZXIxMjNAZ21haWwuY29tOlRndkdvR1BGc0JLek5uYTltZnFSdUM3cEttdXBlR3FadHJpQnBYZENGcQ==
+  response:
+    status:
+      code: 204
+      message: 
+    headers:
+      server:
+      - openresty
+      date:
+      - Sat, 22 Aug 2015 14:32:04 GMT
+      connection:
+      - close
+      status:
+      - 204 No Content
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+      x-content-type-options:
+      - nosniff
+      x-asset-paths:
+      - '{"desktop.js":"desktop-9cfb91b604fe3167db6bb04491169ac6.js","desktop.css":"desktop-d7e97abbc9c3540e9ab5d7537c0b4a05.css"}'
+      cache-control:
+      - no-cache
+      x-request-id:
+      - 7889e359-38d2-449a-8d2c-5a410120d939
+      x-runtime:
+      - '0.184783'
+      access-control-expose-headers:
+      - X-Request-Id, X-Runtime, X-Request-Path, Content-Length
+      x-queue-time:
+      - '0.0011684894561767578'
+      timing-allow-origin:
+      - "*"
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Sat, 22 Aug 2015 14:32:04 GMT
+- request:
+    method: get
+    uri: https://basecamp.com/2274488/api/v1/projects/10268857/attachments/176355933.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.1
+      Authorization:
+      - Basic YmFzZWNhbXB0ZXN0ZXIxMjNAZ21haWwuY29tOlRndkdvR1BGc0JLek5uYTltZnFSdUM3cEttdXBlR3FadHJpQnBYZENGcQ==
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      server:
+      - openresty
+      date:
+      - Sat, 22 Aug 2015 14:32:04 GMT
+      content-type:
+      - application/json; charset=utf-8
+      connection:
+      - Keep-Alive
+      status:
+      - 200 OK
+      x-frame-options:
+      - SAMEORIGIN
+      x-xss-protection:
+      - 1; mode=block
+      x-content-type-options:
+      - nosniff
+      x-asset-paths:
+      - '{"desktop.js":"desktop-9cfb91b604fe3167db6bb04491169ac6.js","desktop.css":"desktop-d7e97abbc9c3540e9ab5d7537c0b4a05.css"}'
+      etag:
+      - '"b83d42427c770d1a1eb1b5054f42ea00"'
+      last-modified:
+      - Sat, 22 Aug 2015 14:32:04 GMT
+      cache-control:
+      - max-age=0, private, must-revalidate
+      x-request-id:
+      - f3d814dc-bb6a-44ad-a470-5717c39a919a
+      x-runtime:
+      - '0.130786'
+      access-control-expose-headers:
+      - X-Request-Id, X-Runtime, X-Request-Path, Content-Length
+      x-queue-time:
+      - '0.0004811286926269531'
+      timing-allow-origin:
+      - "*"
+      vary:
+      - Accept-Encoding
+      content-length:
+      - '590'
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":176355933,"name":"Screen Shot 2015-08-11 at 3.46.51 PM.png","byte_size":1364576,"content_type":"image/png","created_at":"2015-08-22T10:31:12.000-04:00","updated_at":"2015-08-22T10:32:04.000-04:00","private":false,"trashed":true,"key":"e8cad81b5b90bce9e09edceca306f3c20010","url":"https://asset1.basecamp.com/3020319/api/v1/projects/10268857/attachments/176355933/e8cad81b5b90bce9e09edceca306f3c20010/original/Screen%20Shot%202015-08-11%20at%203.46.51%20PM.png","app_url":"https://asset1.basecamp.com/3020319/projects/10268857/attachments/176355933/e8cad81b5b90bce9e09edceca306f3c20010/original/Screen%20Shot%202015-08-11%20at%203.46.51%20PM.png","thumbnail_url":"https://asset1.basecamp.com/3020319/projects/10268857/attachments/176355933/e8cad81b5b90bce9e09edceca306f3c20010/thumbnail.png","tags":[],"creator":{"id":12248264,"name":"Test
+        Application","avatar_url":"http://cdn.37img.com/builtin/default_avatar_v1_4/avatar.gif?r=3","fullsize_avatar_url":"https://cdn.37img.com/builtin/default_avatar_v1_4/original.gif?r=3"},"attachable":{"id":25549429,"type":"Upload","url":"https://basecamp.com/3020319/api/v1/projects/10268857/uploads/25549429.json","app_url":"https://basecamp.com/3020319/projects/10268857/uploads/25549429"}}'
+    http_version: 
+  recorded_at: Sat, 22 Aug 2015 14:32:04 GMT
+recorded_with: VCR 2.9.3
