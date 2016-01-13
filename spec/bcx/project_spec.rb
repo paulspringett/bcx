@@ -27,6 +27,18 @@ describe Bcx::Resources::Project, :vcr do
     end
   end
 
+  describe "GET /projects/drafts" do
+    let(:projects) { client.projects.drafts! }
+
+    it "should be an array" do
+      expect(projects).to be_an Array
+    end
+
+    it "should be empty" do
+      expect(projects).to be_empty
+    end
+  end
+
   describe "GET /projects/2937644" do
     let(:project) { client.projects!(2937644) }
 
