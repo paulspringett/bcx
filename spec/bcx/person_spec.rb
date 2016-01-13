@@ -43,6 +43,18 @@ describe Bcx::Resources::Person, :vcr do
     end
   end
 
+  describe "GET /people/trashed.json" do
+    let(:people) { client.people.trashed! }
+
+    it "should be an array" do
+      expect(people).to be_an Array
+    end
+
+    it "first person should have the correct id" do
+      expect(people.first.id).to eq 4666033
+    end
+  end
+
   describe "DELETE /people/4904728.json" do
     it "should delete a todolist" do
       client.people(4904728).delete!

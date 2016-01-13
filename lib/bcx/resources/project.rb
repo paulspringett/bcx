@@ -12,6 +12,11 @@
 #
 #     clients.projects.archived!
 #
+# #### Fetch draft projects
+# `GET /projects/drafts.json`
+#
+#     clients.projects.drafts!
+#
 # #### Fetch single project with ID of 123
 # `GET /projects/123.json`
 #
@@ -41,6 +46,7 @@ module Bcx
       resource :comments
 
       collection :archived
+      collection :drafts
     end
   end
 end

@@ -7,6 +7,11 @@
 #
 #     client.people!
 #
+# #### Get all trashed people on the account
+# `GET /people/trashed.json`
+#
+#     client.people!.trashed
+#
 # #### Get a person
 # `GET /people/123.json`
 #
@@ -32,6 +37,7 @@ module Bcx
     class Person < Rapidash::Base
       url :people
       collection :me
+      collection :trashed
     end
   end
 end
